@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: white;
     height: 100vh;
     display: flex;
     justify-content: center; /* Centre horizontalement */
@@ -8,7 +8,7 @@ body {
 }
 
 #quiz-container {
-    background: blue;
+    background: navajowhite;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -17,11 +17,9 @@ body {
 .question {
     text-align: center;
     color: white;
-    background-color: red;
 }
 
 .options {
-    background-color: #8ae99e;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, auto));
 }
@@ -41,8 +39,7 @@ button {
 }
 
 #next-button {
-    border-radius: 10px; 
-    background-color: blueviolet;
+    border-radius: 10px;
     border-width: 4px;
     border-color: #8ae99e;
     color: white;
