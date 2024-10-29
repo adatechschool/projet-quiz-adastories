@@ -15,6 +15,7 @@ button {
     border-image-slice: 1;
     border-radius: 3px ;
     color: white;
+    
 }
 
 #next-button {
@@ -23,4 +24,28 @@ button {
     border-width: 4px;
     border-color: #8ae99e;
     color: white;
+}
+
+.question {
+    color: white;
+    background-color: #ebeb;
+    border-radius: 9px;
+    border-width: 5px;
+    
+    display:block;
+    text-decoration:none;
+
+}
+
+button.option-btn:hover {
+background-color: #e34c66;
+transition-duration: 0,3s;
+transition-timing-function: ease;
+transition-delay: 0;
+}
+
+
+button {
+    border-color:204f81;
+    color:#ead4e4;
 }
