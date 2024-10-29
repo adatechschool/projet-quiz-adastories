@@ -1,20 +1,41 @@
 body {
-    background-color: #4a233b;
+    background-color: #4A233B; /*couleur de fond*/
+    margin: 0 auto;
+    margin-top: 50vh; /*Contenu placé à la moitié de la hauteur du viewport*/
+    transform: translateY(-50%); /*Decale le contenu de 50% de sa propre hauteur sur l'axe des Y*/
+    text-align: center; /*Centre le texte */
+}
+
+.question {
+    font-size :40px;
+    color: white;
+    border: 3px solid transparent;
+    background: linear-gradient(#4A233B,#4A233B) padding-box,
+                linear-gradient(to right, darkblue, darkorchid) border-box;
+    border-radius:10px;
+    max-width: fit-content;
+    margin:0 auto;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .options{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, auto));
+    max-width: fit-content;
+    margin:0 auto;
+    text-align:center;
 }
 
 button {
-    background-color: transparent;
-    margin: 5px;
-    border: 3px solid;
-    border-image: linear-gradient(to bottom right,#F1C732,#ebebb8,#F0F0E5);
-    border-image-slice: 1;
-    border-radius: 3px ;
+    background: linear-gradient(#4A233B,#4A233B) padding-box,
+                linear-gradient(to right, darkblue, darkorchid) border-box;
+    /*background-color: transparent;*/
+    margin: 10px;
+    border: 3px solid transparent;
+    border-radius: 10px ;
     color: white;
+    font-size:25px
 }
 
 #next-button {
