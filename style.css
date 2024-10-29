@@ -1,0 +1,19 @@
+body {
+    background-color: #4a233b;
+}
+
+#next-button {
+    border-radius: 10px; 
+    background-color: transparent;
+    border-width: 4px;
+    border-color: #8ae99e;
+    color: white;
+}
+
+.options {
+    border-radius:10px;
+    background-color: transparent;
+    border-width: 4px;
+    border-color: #8ae99e;
+    color: white;
+}
