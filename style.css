@@ -1,8 +1,27 @@
 body {
-    background-color: #4a233b;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    margin: 0;
 }
 
-.options{
+#quiz-container {
+    background: blue;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.question {
+    text-align: center;
+    color: white;
+    background-color: red;
+}
+
+.options {
+    background-color: #8ae99e;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, auto));
 }
@@ -17,9 +36,13 @@ button {
     color: white;
 }
 
+.button-container {
+    align-self: center;
+}
+
 #next-button {
     border-radius: 10px; 
-    background-color: transparent;
+    background-color: blueviolet;
     border-width: 4px;
     border-color: #8ae99e;
     color: white;
