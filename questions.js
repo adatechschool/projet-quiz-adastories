@@ -1,45 +1,44 @@
-export const anecdotes = {
-    questions: [
-    {
-        text: "On peut voir mon père dans les visiteurs",
-        options: [
-          "Laura",
-          "Hugo",
-          "Stella",
-          "Gwenaëlle"
-        ],
-        correct_answer: "Laura"
-    },
-    {
-        text: "J'ai un piercing à la langue",
-        options: [
-          "Daniel",
-          "Leyane",
-          "Marie",
-          "Lauriane"
-        ],
-        correct_answer: "Marie"
-    },
-    {
-        text: "Je me suis fait virer de mon job après un malentendu avec un client alors que j'avais signé un gros contrat à 7000€",
-        options: [
-          "Raïssa",
-          "Leyane",
-          "Ange",
-          "Léandre"
-        ],
-        correct_answer: "Leyane"
-    }
-
-    {
-        text: "Anecdote numéro 4 à ajouter plus tard",
-        options: [
-          "Prénom 1",
-          "Prénom 2",
-          "Prénom 3",
-          "Prénom 4"
-        ],
-        correct_answer: "Prénom 2"
-    }
-    ]
-  };
+export const quiz_adastories = {
+  questions: [
+      {
+          text: "Tu peux voir mon père dans Les Visiteurs.",
+          options: [
+              "Gwenaëlle",
+              "Laura",
+              "Jude",
+              "Hugo"
+          ],
+          correct_answer: "Laura !"
+      },
+      {
+          text: "J'ai un piercing à la langue",
+          options: [
+              "Marie",
+              "Leyane",
+              "Lauriane",
+              "Daniel"
+          ],
+          correct_answer: "Marie"
+      },
+      {
+          text: "Je me suis fait.e virer parce que je me suis disputé.e avec un client. Alors que j'avais signé un contrat pour gagner 7k en 3 mois.",
+          options: [
+              "Ludovic",
+              "Hugo",
+              "Leyane",
+              "Raïssa"
+          ],
+          correct_answer: "Leyane"
+      },
+      {
+          text: "Pour retrouver mon date dans un lieu précis (avant d'aller dans un bar), on a organisé un jeu de piste avec des énigmes.",
+          options: [
+              "Majda",
+              "Stella",
+              "Ange",
+              "Gwenaëlle"
+          ],
+          correct_answer: "Gwenaëlle"
+      }
+  ]
+};
