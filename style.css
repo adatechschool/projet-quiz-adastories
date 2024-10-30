@@ -1,14 +1,46 @@
 body {
     background-color: #4a233b;
+    margin: 0 ;
+    margin-top:50vh; /*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*/
+    transform: translateY(-50%);/* pour le decal surl'axe du Y(décale a sa propre hauteur)*/
+    text-align: center;/*fait centrer le bouton suivant */
+    display: flex;/* pour que diso de la page flexible */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;  
+}
+.question {
+    font-size :40px; /*taille de la police*/
+    color: white; /*Couleur de police*/
+    border: 3px solid transparent; /*contour plein et transparent*/
+    background: linear-gradient(#4A233B,#4A233B) padding-box, /*Intérieur de la case de la questions*/
+                linear-gradient(to right, darkblue, darkorchid) border-box; /*contour de la case de la question*/
+    border-radius:10px; /*Arrondir les angles*/
+    /*max-width: fit-content; /*la largeur du bouton correspond au contenu*/
+    width: 1000px;
+    margin:0 auto;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-.options{
+
+
+
+.options{  /*ajouté un borde ici */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, auto));
-}
+    /*max-width: fit-content;*/
+    margin:0 auto;
+    text-align:center;
 
+    
+}
+#quiz-container { /* pour l'instant ne fonctionne pas (censer tout centrer)*/
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
 button {
-    background-color: transparent;
+    background-color: transparent ;
     margin: 5px;
     border: 3px solid;
     border-image: linear-gradient(to bottom right,#F1C732,#ebebb8,#F0F0E5);
