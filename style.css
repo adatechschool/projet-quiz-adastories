@@ -27,6 +27,11 @@ body {
     margin:0 auto;
     margin-bottom: 25px;
     text-align: center;
+
+    border-width: 5px;
+
+    display:block;
+    text-decoration:none;
 }
 
 .options{  /*ajouté un borde ici */
@@ -44,8 +49,15 @@ button {
     border-image: linear-gradient(to bottom right,#F1C732,#ebebb8,#F0F0E5);
     border-image-slice: 1;
     border-radius: 3px ;
+    border-color:204f81;
     color: white;
-    
+}
+
+button.option-btn:hover {
+    background-color: #E34C66;
+    transition-duration: 0,3s;
+    transition-timing-function: ease;
+    transition-delay: 0;
 }
 
 #next-button {
