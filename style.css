@@ -1,4 +1,14 @@
 body {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    margin: 0;
+}
+
+#quiz-container {
+    background: navajowhite;
     background-color: #4a233b;
     margin: 0 ;
     margin-top:50vh; /*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*/
@@ -16,6 +26,11 @@ body {
 }
 
 .question {
+    text-align: center;
+    color: white;
+}
+
+.options {
     font-size :40px; /*taille de la police*/
     color: white; /*Couleur de police*/
     border: 3px solid transparent; /*contour plein et transparent*/
@@ -57,12 +72,15 @@ button.option-btn:hover {
     background-color: #E34C66;
     transition-duration: 0,3s;
     transition-timing-function: ease;
-    transition-delay: 0;
+    transition-delay: 0;}
+
+.button-container {
+    align-self: center;
+
 }
 
 #next-button {
-    border-radius: 10px; 
-    background-color: transparent;
+    border-radius: 10px;
     border-width: 4px;
     border-color: #8ae99e;
     color: white;
