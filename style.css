@@ -8,6 +8,13 @@ body {
     justify-content: center; /* Centre horizontalement */
     align-items: center;  
 }
+
+#quiz-container { /* Donne la taille au quizz au container */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
 .question {
     font-size :40px; /*taille de la police*/
     color: white; /*Couleur de police*/
@@ -16,29 +23,20 @@ body {
                 linear-gradient(to right, darkblue, darkorchid) border-box; /*contour de la case de la question*/
     border-radius:10px; /*Arrondir les angles*/
     /*max-width: fit-content; /*la largeur du bouton correspond au contenu*/
-    width: 1000px;
+    width: 60vw;
     margin:0 auto;
     margin-bottom: 25px;
     text-align: center;
 }
 
-
-
-
 .options{  /*ajouté un borde ici */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, auto));
     /*max-width: fit-content;*/
-    margin:0 auto;
-    text-align:center;
+    /*margin:0 auto;*/
+    /*text-align:center;*/
+}
 
-    
-}
-#quiz-container { /* pour l'instant ne fonctionne pas (censer tout centrer)*/
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
 button {
     background-color: transparent ;
     margin: 5px;
