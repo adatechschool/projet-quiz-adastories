@@ -1,7 +1,7 @@
 export const quiz_adastories = {
     questions: [
         {
-            text: "Tu peux voir mon père dans les Visiteurs.",
+            text: "Tu peux voir mon père dans 'Les Visiteurs'.",
             options: [
                 "Gwenaëlle",
                 "Laura",
