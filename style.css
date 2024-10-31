@@ -1,5 +1,6 @@
 body {
-    background-color: #4A233B; /*couleur de fond*/
+    background: radial-gradient(circle, #fedcff 0%, rgba(224,145,226,1) 60%);
+    /* background-color: #E5B1E6; couleur de fond */
     margin: 0 auto;
     margin-top: 50vh; /*Contenu placé à la moitié de la hauteur du viewport*/
     transform: translateY(-50%); /*Decale le contenu de 50% de sa propre hauteur sur l'axe des Y*/
@@ -11,9 +12,9 @@ body {
 
 .question {
     font-size :40px; /*taille de la police*/
-    color: white; /*Couleur de police*/
+    color: black; /*Couleur de police*/
     border: 3px solid transparent; /*contour plein et transparent*/
-    background: linear-gradient(#4A233B,#4A233B) padding-box, /*Intérieur du bouton*/
+    background: radial-gradient(circle, #fedcff 0%, rgba(224,145,226,1) 100%) padding-box, /*Intérieur du bouton*/
                 linear-gradient(to right, darkblue, darkorchid) border-box; /*contour du bouton*/
     border-radius:10px; /*Arrondir les angles*/
     /* max-width: fit-content; la largeur du bouton correspond au contenu */
@@ -24,7 +25,6 @@ body {
 }
 
 #quiz-container {
-    background: navajowhite;
     margin: auto;
 }
 
@@ -35,13 +35,13 @@ body {
 }
 
 button {
-    background: linear-gradient(#4A233B,#4A233B) padding-box,
+    background: radial-gradient(circle, #fedcff 0%, rgba(224,145,226,1) 100%) padding-box,
                 linear-gradient(to right, darkblue, darkorchid) border-box;
     /*background-color: transparent;*/
     margin: 10px;
     border: 3px solid transparent;
     border-radius: 10px ;
-    color: white;
+    color: black;
     font-size:25px
 }
 
@@ -50,5 +50,5 @@ button {
     background-color: transparent;
     border-width: 4px;
     border-color: #8ae99e;
-    color: white;
+    color: black;
 }

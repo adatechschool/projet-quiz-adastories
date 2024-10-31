@@ -8,7 +8,7 @@ export const quiz_adastories = {
               "Jude",
               "Hugo"
           ],
-          correct_answer: "Laura !"
+          correct_answer: "Laura"
       },
       {
           text: "J'ai un piercing à la langue",
