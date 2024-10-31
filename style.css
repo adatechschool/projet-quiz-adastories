@@ -1,22 +1,21 @@
 body {
-    background-color: white;
     height: 100vh;
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center;     /* Centre verticalement */
     margin: 0;
+    background-color: #4A233B;
 }
 
 #quiz-container {
-    background: navajowhite;
-    background-color: #4a233b;
+    background-color: #4A233B;
     margin: 0 ;
-    margin-top:50vh; /*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*/
+    margin-top: 50vh; /*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*/
     transform: translateY(-50%);/* pour le decal surl'axe du Y(décale a sa propre hauteur)*/
     text-align: center;/*fait centrer le bouton suivant */
     display: flex;/* pour que diso de la page flexible */
     justify-content: center; /* Centre horizontalement */
-    align-items: center;  
+    align-items: center;
 }
 
 #quiz-container { /* Donne la taille au quizz au container */
@@ -37,7 +36,7 @@ body {
     background: linear-gradient(#4A233B,#4A233B) padding-box, /*Intérieur de la case de la questions*/
                 linear-gradient(to right, darkblue, darkorchid) border-box; /*contour de la case de la question*/
     border-radius:10px; /*Arrondir les angles*/
-    /*max-width: fit-content; /*la largeur du bouton correspond au contenu*/
+    /*max-width: fit-content; !*la largeur du bouton correspond au contenu*/
     width: 60vw;
     margin:0 auto;
     margin-bottom: 25px;

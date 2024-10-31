@@ -1,4 +1,4 @@
-const quiz_adastories = {
+export const quiz_adastories = {
     questions: [
         {
             text: "Tu peux voir mon père dans les Visiteurs.",
@@ -43,3 +43,5 @@ const quiz_adastories = {
         // Autres questions...
     ]
 };
+
+document.getElementsByClassName()
