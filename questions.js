@@ -43,5 +43,3 @@ export const quiz_adastories = {
         // Autres questions...
     ]
 };
-
-document.getElementsByClassName()
