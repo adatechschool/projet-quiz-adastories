@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+    background-color: #000000;
 
     min-height: 100vh;
 
@@ -35,9 +35,9 @@ body {
     /*background-color: whitesmoke;*/
 
     /* POSITION ET DÉCO DU TEXTE */
-    text-align: center;
     display: flex;
-    align-items: center;
+    text-align: center;
+    justify-content: center;
     padding: 1rem 1rem;
     position: relative;
 
@@ -95,7 +95,8 @@ body {
     /* LES BORDS */
     border: 0.5vw solid transparent; /* Épaisseur du bord */
     border-radius: 30px;
-    background: linear-gradient(#000, #000) padding-box, radial-gradient(#00C9A7, #845EC2) border-box;
+    background: linear-gradient(#000, #000) padding-box,
+                radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
 /* POLICE */

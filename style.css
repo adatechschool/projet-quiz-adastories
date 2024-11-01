@@ -1,73 +1,108 @@
 body {
-    height: 100vh;
+    background-color: #000000;
+
+    min-height: 100vh;
+
+    /* POSITION */
+    /* margin: 0; */ /* en conflit avec flexbox */
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;     /* Centre verticalement */
-    margin: 0;
-    background-color: #4A233B;
+    justify-content: center;  /* aligne les éléments horizontalement */
+    height: 100vh; /* obligé de donné une taille au body pour mettre en centre verticalement */
+    align-items: center; /* aligne les éléments verticalement */
 }
 
 #quiz-container {
-    background-color: #4A233B;
-    margin: 0 ;
-    margin-top: 50vh; /*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*/
-    transform: translateY(-50%);/* pour le decal surl'axe du Y(décale a sa propre hauteur)*/
-    text-align: center;/*fait centrer le bouton suivant */
-    display: flex;/* pour que diso de la page flexible */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;
-}
+    /*background-color: transparent;*/
 
-#quiz-container { /* Donne la taille au quizz au container */
+    /* LES BORDS */
+    border: 0.7vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+    radial-gradient(#00C9A7, #845EC2) border-box;
+
+    /* TAILLE DU CONTAINER */
+    width: 50vw;
+    height: 50vh;
+
+    /* POSITION DES ÉLÉMENTS À L'INTÉRIEUR */
     display: flex;
-    flex-direction: column;
-    margin: auto;
+    flex-direction: column; /* permet de mettre en colonne */
+    align-items: center; /* centre les blos au centre */
+    justify-content: space-between; /* met en espace entre les blocs */
 }
 
 .question {
-    text-align: center;
-    color: white;
+    /*background-color: whitesmoke;*/
+
+    /* POSITION ET DÉCO DU TEXTE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    /*position: relative;*/
+
+    /* TAILLE DU BLOC QUESTION */
+    height: 10vh;
+    width: 50vw;
+
+    /* LES BORDS */
+    border: 0.7vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+    radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
 .options {
-    font-size :40px; /*taille de la police*/
-    color: white; /*Couleur de police*/
-    border: 3px solid transparent; /*contour plein et transparent*/
-    background: linear-gradient(#4A233B,#4A233B) padding-box, /*Intérieur de la case de la questions*/
-                linear-gradient(to right, darkblue, darkorchid) border-box; /*contour de la case de la question*/
-    border-radius:10px; /*Arrondir les angles*/
-    /*max-width: fit-content; !*la largeur du bouton correspond au contenu*/
-    width: 60vw;
-    margin:0 auto;
-    margin-bottom: 25px;
-    text-align: center;
+    background-color: transparent;
+
+    /* TAILLE DU BLOC OPTIONS */
+    width: 45vw;
+    max-height: 30vh;
+
+    /* POSITION */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
-.options{  /*ajouté un borde ici */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, auto));
-    /*max-width: fit-content;*/
-    /*margin:0 auto;*/
-    /*text-align:center;*/
-}
+.button-options {
+    /* TAILLE DU BOUTON */
+    height: 6vh;
+    width: 20vw;
 
-button {
-    background-color: transparent ;
-    margin: 5px;
-    border: 3px solid;
-    border-image: linear-gradient(to bottom right,#F1C732,#ebebb8,#F0F0E5);
-    border-image-slice: 1;
-    border-radius: 3px ;
-    color: white;
+    /* POSITION */
+    margin: 0.5em 0.5em;
+
+    /* LES BORDS */
+    border: 0.5vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+    radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
 .button-container {
-    align-self: center;
+    /*background-color: cadetblue;*/
 }
 
 #next-button {
-    border-radius: 10px;
-    border-width: 4px;
-    border-color: #8ae99e;
+    /*background-color: blueviolet;*/
+
+    /* POSITION */
+    margin: 3vh; /* marge entre le bas et le bouton */
+    padding: 1rem 1rem;
+
+    /* LES BORDS */
+    border: 0.5vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+    radial-gradient(#00C9A7, #845EC2) border-box;
+}
+
+/* POLICE */
+.question, .button-options, #next-button {
+    font-family: "Gill Sans";
     color: white;
 }
+
+/*Ceci peut être déroutant, mais align-content détermine l'espace entre les lignes, alors que align-items détermine comment les éléments dans leur ensemble sont alignées à l'intérieur du conteneur. Quand il n'y a qu'une seule ligne, align-content n'a aucun effet.*/
