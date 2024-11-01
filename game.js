@@ -14,11 +14,10 @@ let firstQuestion = quiz_adastories.questions[0];
 // injection du texte dans le DOM :
 getQuestion.innerText = firstQuestion.text;
 
-firstQuestion.options.forEach(element => {
-    // console.log(element);
+for (const option of firstQuestion.options) {
+    const addBtnOption = document.createElement("button");
 
-    const addBtnOption = document.createElement('button');
-    addBtnOption.innerText = firstQuestion.options[0, 1, 2, 3];
-    // __________.classList.add('__________');
     getOptions.appendChild(addBtnOption);
-})
+    addBtnOption.classList.add('button-options') ;
+    addBtnOption.innerText = option;
+}
