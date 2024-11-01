@@ -1,3 +1,5 @@
+// TODO comprendre ce qu'il se passe précisément !
+
 document.querySelector('.options').onmousemove = (e) => {
 
     const x = e.pageX - e.target.offsetLeft
