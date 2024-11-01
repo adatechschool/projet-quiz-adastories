@@ -40,12 +40,11 @@ body {
 
 .question {
     /* POSITION ET DÉCO DU TEXTE */
-    text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 1rem 1rem;
     position: relative;
-    color: white;
 
     /* TAILLE DU BLOC QUESTION */
     height: 10vh;
