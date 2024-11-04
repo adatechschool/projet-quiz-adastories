@@ -32,7 +32,7 @@ body {
 }
 
 /* POLICE */
-.question, .button-options, #next-button, #replay-button {
+.question, .button-options, #next-button, #replay-button, .correct, .incorrect {
     font-family: "Gill Sans";
     color: white;
     font-size: x-large;
@@ -89,6 +89,40 @@ body {
     border-radius: 30px;
     /*background: linear-gradient(#000, #000) padding-box,*/
     /*radial-gradient(#00C9A7, #845EC2) border-box;*/
+}
+
+.correct {
+    /* TAILLE DU BOUTON */
+    height: 6vh;
+    width: 20vw;
+
+    /* POSITION */
+    margin: 0.5em 0.5em;
+
+    /* LES BORDS */
+    border: 0.5vw solid #00C9A7; /* Épaisseur du bord */
+    border-radius: 30px;
+
+    /* POLICE */
+    font-size: x-large;
+    color: #00C9A7;
+}
+
+.untrue {
+    /* TAILLE DU BOUTON */
+    height: 6vh;
+    width: 20vw;
+
+    /* POSITION */
+    margin: 0.5em 0.5em;
+
+    /* LES BORDS */
+    border: 0.5vw solid #FF0000; /* Épaisseur du bord */
+    border-radius: 30px;
+
+    /* POLICE */
+    font-size: x-large;
+    color: #FF0000;
 }
 
 .button-container {

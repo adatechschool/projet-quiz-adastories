@@ -40,6 +40,16 @@ export const quiz_adastories = {
             ],
             correct_answer: "Gwenaëlle"
         },
+        {
+            text: "Je me suis évanoui.e à cause de la canicule lors d'une séance de tatouage.",
+            options: [
+                "Gwenaëlle",
+                "Angélia",
+                "Jude",
+                "Marie",
+            ],
+            correct_answer: "Angélia"
+        },
         // Autres questions...
     ]
 };
