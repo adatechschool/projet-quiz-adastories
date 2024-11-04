@@ -39,7 +39,7 @@ body {
 }
 
 /* POLICE */
-.question, .button-options, #next-button {
+.question, .button-options, #next-button, #replay-button {
     font-family: "Gill Sans";
     color: white;
     font-size: x-large;
@@ -102,7 +102,7 @@ body {
     /*background-color: cadetblue;*/
 }
 
-#next-button {
+#next-button, #replay-button {
     /*background-color: blueviolet;*/
 
     /* POSITION */

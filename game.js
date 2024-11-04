@@ -4,6 +4,7 @@ import { quiz_adastories } from './questions.js'; // Import des questions
 const getQuestion = document.querySelector('.question');
 const getOptions = document.querySelector('.options');
 const getNextBtn = document.querySelector('#next-button');
+const getReplayBtn = document.querySelector('#replay-button')
 
 let currentQuestionIndex = 0; // Qd tu cliques ça fait + 1
 
@@ -51,8 +52,17 @@ getNextBtn.addEventListener('click', () => {
     getQuestion.innerText = 'le quizz est fini';
     getOptions.innerHTML = ''; // Effacer les options
     getNextBtn.style.display = 'none'; // Cacher le bouton Suivant
+    getReplayBtn.style.display = 'inline-block'; // Afficher le bouton replay
   }
 })
 
 loadQuestion();
-// fin étape 5 étape 6 =>
+
+getReplayBtn.addEventListener('click', () => {
+    currentQuestionIndex = 0
+    getReplayBtn.style.display = 'none'
+    getNextBtn.style.display = 'inline-block';
+     loadQuestion()
+})
+
+
