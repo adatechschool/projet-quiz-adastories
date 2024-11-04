@@ -23,11 +23,12 @@ function loadQuestion() {
     let currentQuestion = quiz_adastories.questions[currentQuestionIndex];
     console.log(currentQuestion);
 
+    getOptions.innerText =""
     // injection du texte dans le DOM :
     getQuestion.innerText = currentQuestion.text;
 
     // ici c'est les options
-    for (const option of firstQuestion.options) {
+    for (const option of currentQuestion.options) {
         const addBtnOption = document.createElement("button");
 
         getOptions.appendChild(addBtnOption);
@@ -36,4 +37,22 @@ function loadQuestion() {
     }
 }
 
+getNextBtn.addEventListener('click', () => {
+    // Incrémenter l'index de la question
+    currentQuestionIndex++;
+    //console.log(currentQuestionIndex)
+
+     // Vérifier s'il reste des questions
+  if (currentQuestionIndex < quiz_adastories.questions.length) {
+    // Afficher la question suivante
+    loadQuestion();
+  } else {
+   // Si plus de questions, indiquer la fin du quiz
+    getQuestion.innerText = 'le quizz est fini';
+    getOptions.innerHTML = ''; // Effacer les options
+    getNextBtn.style.display = 'none'; // Cacher le bouton Suivant
+  }
+})
+
 loadQuestion();
+// fin étape 5 étape 6 =>
