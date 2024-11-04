@@ -27,10 +27,13 @@ function loadQuestion() {
         options.appendChild(addBtnOption);
         addBtnOption.classList.add('button-options');
         addBtnOption.innerText = option;
+
+        addBtnOption.addEventListener('click', checkAnswer);
     }
 
     // Ajouter l'écouteur d'événement qui va vérifier la réponse
-    options.addEventListener('click', checkAnswer);
+    // addBtnOption.addEventListener('click', checkAnswer); // On n'y a pas accés car n'est pas dans la boucle
+    // options.addEventListener('click', checkAnswer); // Génère un bug car le addEventListener est sur le container option => ça élargie la zone pour le target
 
     // Après que la réponse soit vérifiée par la fonction checkAnswer, on désactive à nouveau le bouton suivant avant de sélectionner une option/réponse.
     nextBtn.disabled = true;
@@ -69,9 +72,10 @@ replayBtn.addEventListener('click', () => {
 });
 
 // Ici on vérifie les réponses :
-function checkAnswer(choice) {
+function checkAnswer(element) {
 
-    const clickedBtn = choice.target;
+    const clickedBtn = element.target;
+    console.log(clickedBtn)
     const selectedAnswer = clickedBtn.innerText;
     console.log(selectedAnswer);
 
