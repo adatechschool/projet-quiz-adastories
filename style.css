@@ -45,10 +45,18 @@ button {
     font-size:25px
 }
 
-#next-button {
+#next-button, #test {
     border-radius: 10px; 
     background-color: transparent;
     border-width: 4px;
     border-color: #8ae99e;
     color: black;
+}
+
+.correct {
+    background: greenyellow;
+}
+
+.untrue {
+    background: red;
 }

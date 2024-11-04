@@ -35,6 +35,27 @@ function loadQuestion() {
         getOptions.appendChild(addBtnOption);
         addBtnOption.classList.add('button-options') ;
         addBtnOption.innerText = option;
+
+        addBtnOption.addEventListener('click', () => {
+          // console.log(option)
+          const optionBtn = document.querySelectorAll('.button-options')
+          console.log("optionBtn : ", optionBtn)
+
+          for(const button of optionBtn){
+            button.classList.remove('untrue')} // rendre les autres boutons non cliquables
+
+        console.log("value: ", option)
+        console.log("correct :", currentQuestion.correct_answer)
+
+          if (option === currentQuestion.correct_answer) {
+            addBtnOption.classList.add('correct')
+            console.log("true")
+          }
+          else {
+            addBtnOption.classList.add('untrue')
+            console.log("false")
+          }
+      }) 
     }
 }
 
@@ -65,4 +86,20 @@ getReplayBtn.addEventListener('click', () => {
      loadQuestion()
 })
 
+const optionBtn = document.querySelector('.button-options')
+const optionBtnValue = optionBtn.innerText
+console.log(optionBtn)
 
+
+// for(const button of optionBtn){
+//   button.addEventListener('click', () => {
+//     for(const button of buttons){
+//       button.classList.remove()}
+    
+//     if (optionBtnValue == currentQuestion.correct_answer) {
+//       button.classList.add('correct')
+//     }
+//     else {
+//       button.classList.add('untrue')
+//     }
+// })}
