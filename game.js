@@ -5,11 +5,8 @@ let currentQuestionIndex = 0;
 
 // DOM affichage
 const question = document.querySelector('.question');
-// console.log(getQuestion);
 const options = document.querySelector('.options');
-// console.log(getOptions);
 const nextBtn = document.querySelector('#next-button');
-// console.log(getNextBtn);
 const replayBtn = document.querySelector('#replay-button');
 
 function loadQuestion() {
@@ -68,5 +65,8 @@ replayBtn.addEventListener('click', () => {
 function checkAnswer() {
 
 }
+
+const valueOption = options.textContent;
+console.log("valeur: ",valueOption)
 
 loadQuestion()

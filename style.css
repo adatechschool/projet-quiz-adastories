@@ -22,13 +22,20 @@ body {
 
     /* TAILLE DU CONTAINER */
     width: 50vw;
-    height: 50vh;
+    height: fit-content;
 
     /* POSITION DES ÉLÉMENTS À L'INTÉRIEUR */
     display: flex;
     flex-direction: column; /* permet de mettre en colonne */
     align-items: center; /* centre les blos au centre */
     justify-content: space-between; /* met en espace entre les blocs */
+}
+
+/* POLICE */
+.question, .button-options, #next-button, #replay-button {
+    font-family: "Gill Sans";
+    color: white;
+    font-size: x-large;
 }
 
 .question {
@@ -40,9 +47,11 @@ body {
     justify-content: center;
     padding: 1rem 1rem;
     position: relative;
+    text-align: center;
+    font-size: xxx-large;
 
     /* TAILLE DU BLOC QUESTION */
-    height: 10vh;
+    max-height: fit-content;
     width: 50vw;
 
     /* LES BORDS */
@@ -58,6 +67,7 @@ body {
     /* TAILLE DU BLOC OPTIONS */
     width: 45vw;
     max-height: 30vh;
+    margin-top: 5vh;
 
     /* POSITION */
     display: flex;
@@ -97,12 +107,6 @@ body {
     border-radius: 30px;
     /*background: linear-gradient(#000, #000) padding-box,*/
     /*radial-gradient(#00C9A7, #845EC2) border-box;*/
-}
-
-/* POLICE */
-.question, .button-options, #next-button, #replay-button {
-    font-family: "Gill Sans";
-    color: white;
 }
 
 button {
