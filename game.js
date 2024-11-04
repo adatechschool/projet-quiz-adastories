@@ -8,9 +8,8 @@ const getOptions = document.querySelector('.options');
 const getNextBtn = document.querySelector('#next-button');
 // console.log(getNextBtn);
 
-let firstQuestion = quiz_adastories.questions[0];
-// console.log(firstQuestion);
-
+let firstQuestion = quiz_adastories.questions[3];
+// console.log(firstQuestion);0
 // injection du texte dans le DOM :
 getQuestion.innerText = firstQuestion.text;
 

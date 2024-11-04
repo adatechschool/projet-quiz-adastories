@@ -24,7 +24,7 @@ body {
     /* TAILLE DU CONTAINER */
     /* Il semble que donner une taille au container permet après de jouer avec flexbox et de la positionner sur notre écran */
     width: 50vw;
-    height: 50vh;
+    height: fit-content;
 
     /* POSITION DES ÉLÉMENTS À L'INTÉRIEUR */
     display: flex; /* doit être "appeler" pour utiliser les paramètres qui positionnent */
@@ -38,6 +38,13 @@ body {
     /*text-align: center;!*fait centrer le bouton suivant *!*/
 }
 
+/* POLICE */
+.question, .button-options, #next-button {
+    font-family: "Gill Sans";
+    color: white;
+    font-size: x-large;
+}
+
 .question {
     /* POSITION ET DÉCO DU TEXTE */
     display: flex;
@@ -45,9 +52,12 @@ body {
     justify-content: center;
     padding: 1rem 1rem;
     position: relative;
+    text-align: center;
+    font-size: xxx-large;
 
     /* TAILLE DU BLOC QUESTION */
-    height: 10vh;
+    /*height: 10vh;*/
+    max-height: fit-content;
     width: 50vw;
 
     /* LES BORDS */
@@ -63,8 +73,9 @@ body {
     /* TAILLE DU BLOC OPTIONS */
     width: 45vw;
     max-height: 30vh;
+    margin-top: 5vh;
 
-    /* POSITION */
+    /* POSITION / CENTRAGE */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -102,10 +113,4 @@ body {
     border: 0.5vw solid transparent; /* Épaisseur du bord */
     border-radius: 30px;
     background: linear-gradient(#000, #000) padding-box, radial-gradient(#00C9A7, #845EC2) border-box;
-}
-
-/* POLICE */
-.question, .button-options, #next-button {
-    font-family: "Gill Sans";
-    color: white;
 }
