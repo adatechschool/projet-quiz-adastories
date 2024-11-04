@@ -65,4 +65,10 @@ getReplayBtn.addEventListener('click', () => {
      loadQuestion()
 })
 
+// évènement au clique sur les options
+const optionBtn=document.querySelector(".button-options")
 
+console.log(optionBtn.innerText)
+let optionBtnValue=optionBtn.innerText
+ 
+console.log(optionBtnValue)
