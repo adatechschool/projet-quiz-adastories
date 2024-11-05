@@ -2,6 +2,7 @@ import { quiz_adastories } from './questions.js'; // Import des questions
 
 // Pour suivre a question actuelle
 let currentQuestionIndex = 0;
+let score = 0;
 
 // DOM affichage
 const question = document.querySelector('.question');
@@ -57,6 +58,9 @@ nextBtn.addEventListener('click', () => {
         options.innerHTML = ''; // Effacer les options
         nextBtn.style.display = 'none'; // Cacher le bouton Suivant
         replayBtn.style.display = 'inline-block'; // Afficher le bouton Rejouer
+
+        // On appelle la fonction bravo pour faire afficher un GIF selon le score
+        bravo();
     }
 })
 
@@ -64,20 +68,25 @@ nextBtn.addEventListener('click', () => {
 replayBtn.addEventListener('click', () => {
     // Réinitialiser l'index
     currentQuestionIndex = 0;
+
     // Cacher le bouton Rejouer et afficher le bouton Suivant
     replayBtn.style.display = 'none';
     nextBtn.style.display = 'inline-block';
+
     // Recharger la première question
     loadQuestion()
+
+    // Remet à zéro le score
+    score = 0;
 });
 
 // Ici on vérifie les réponses :
 function checkAnswer(element) {
 
     const clickedBtn = element.target;
-    console.log(clickedBtn)
+    // console.log(clickedBtn)
     const selectedAnswer = clickedBtn.innerText;
-    console.log(selectedAnswer);
+    // console.log(selectedAnswer);
 
     // Il faut désactiver les bouttons quand on a cliqué :
     const allBtn = document.querySelectorAll('.button-options');
@@ -94,14 +103,37 @@ function checkAnswer(element) {
 
     // Conditions pour véréfier les réponses :
     if (selectedAnswer === correctAnswer) {
-        console.log('La réponse est bonne')
-        clickedBtn.classList.remove('button-options')
+        // console.log('La réponse est bonne')
+        // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('correct');
+
+        // on incrémente le score
+        score++;
+        console.log("score: ", score)
     } else {
-        console.log('La réponse est fausse')
-        clickedBtn.classList.remove('button-options')
+        // console.log('La réponse est fausse')
+        // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('untrue');
     }
 }
 
+// Ici une fonction qui affiche un GIF selon le score
+function bravo () {
+    const arrayLength = quiz_adastories.questions.length;
+
+    if (score === quiz_adastories.questions.length) {
+        console.log('Vous êtes trop forts !');
+        const addDiv = document.createElement('div');
+        addDiv.classList.add('gif')
+        options.appendChild(addDiv).textContent = `Vous êtes trop forts ! Score = ${score}/${arrayLength}`;
+    } else if (score > 3) {
+        console.log('On est proche !')
+    } else if ( score === 2) { // mettre un modulo de 2
+        console.log('C\'est pas mal !')
+    } else {
+        console.log('Allez, tu peux mieux faire !')
+    }
+}
+
+// Permet de charger la question à l'ouverture de la page
 loadQuestion()
