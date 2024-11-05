@@ -117,6 +117,7 @@ function checkAnswer(element) {
 }
 
 // Ici une fonction qui affiche un GIF selon le score
+// Il faut nettoyer c'est pas propre
 function finalScore () {
     const arrayLength = quiz_adastories.questions.length;
     const medium = arrayLength/2;
@@ -136,7 +137,6 @@ function finalScore () {
         gif.alt = "Félicitations";
         options.appendChild(gif);
     } else if (score > medium) {
-
         // On affiche le score final
         options.appendChild(addDiv).textContent = `On est proche ! Score = ${score}/${arrayLength}`;
 
@@ -144,17 +144,26 @@ function finalScore () {
         gif.alt = "Pas mal";
         options.appendChild(gif);
     } else if (score === medium) {
-
         // On affiche le score final
-        const addDiv = document.createElement('div');
-        addDiv.classList.add('gif')
         options.appendChild(addDiv).textContent = `C\'est pas mal ! Score = ${score}/${arrayLength}`;
-    } else if (score < medium) {
 
+        gif.src = ''
+        gif.alt = "Pas mal !";
+        options.appendChild(gif);
+    } else if (score < medium && score > 0) {
         // On affiche le score final
-        const addDiv = document.createElement('div');
-        addDiv.classList.add('gif')
         options.appendChild(addDiv).textContent = `Allez, tu peux mieux faire ! Score = ${score}/${arrayLength}`;
+
+        gif.src = './images/DALL·E Manga Illustration (1).webp'
+        gif.alt = "Peux mieux faire !";
+        options.appendChild(gif);
+    } else if (score === 0) {
+        // On affiche le score final
+        options.appendChild(addDiv).textContent = `C\'est nul ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExejViYnNuMmZmYThiMHFiNjBjMTNnZHp0MjZtd3dzdjR1bDYzY2UzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/06ICMm65hcawzW3Dst/giphy.gif'
+        gif.alt = "Nul !";
+        options.appendChild(gif);
     }
 }
 
