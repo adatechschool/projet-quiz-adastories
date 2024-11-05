@@ -40,9 +40,7 @@ function loadQuestion() {
 getNextBtn.addEventListener('click', () => {
     // Incrémenter l'index de la question
     currentQuestionIndex++;
-    scoree++;
-    console.log(scoree)
-    scoreAfiche.innerText=scoree
+    
     //console.log(currentQuestionIndex)
 
      // Vérifier s'il reste des questions
@@ -60,6 +58,9 @@ getNextBtn.addEventListener('click', () => {
 
 getReplayBtn.addEventListener('click', () => {
     currentQuestionIndex = 0
+    scoree = 0
+    console.log(scoree)
+    scoreAfiche.innerText=scoree;
     getReplayBtn.style.display = 'none'
     getNextBtn.style.display = 'inline-block';
     loadQuestion()
@@ -83,11 +84,14 @@ function checkAnswer (pointer) {
     // Condition pour vérifier la réponse
     if (selectedAnswer === quiz_adastories.questions[currentQuestionIndex].correct_answer) {
         clickedBtn.classList.add('correct');
+        scoree++;
+        console.log(scoree)
+        scoreAfiche.innerText=scoree;
     } else {
         clickedBtn.classList.add('untrue');
     }
 
-    getNextBtn.disabled = false;
+  getNextBtn.disabled = false;
 }
 
 loadQuestion();
