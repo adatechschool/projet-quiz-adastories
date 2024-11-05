@@ -114,3 +114,10 @@ body {
     border-radius: 30px;
     background: linear-gradient(#000, #000) padding-box, radial-gradient(#00C9A7, #845EC2) border-box;
 }
+
+#score { color:rgb(0, 0, 0);
+    background-color: rgb(241, 245, 249);
+    width: 100px;
+    height: 80px;
+    
+    }

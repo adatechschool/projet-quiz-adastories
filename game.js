@@ -4,9 +4,12 @@ import { quiz_adastories } from './questions.js'; // Import des questions
 const getQuestion = document.querySelector('.question');
 const getOptions = document.querySelector('.options');
 const getNextBtn = document.querySelector('#next-button');
-const getReplayBtn = document.querySelector('#replay-button')
+const getReplayBtn = document.querySelector('#replay-button');
+const scoreAfiche = document.querySelector('#score');
 
-let currentQuestionIndex = 0; // Qd tu cliques ça fait + 1
+let currentQuestionIndex = 0; 
+let scoree= 0 //score 
+
 
 let firstQuestion = quiz_adastories.questions[3]; // faut que ça bouge
 // console.log(firstQuestion);0
@@ -41,6 +44,9 @@ function loadQuestion() {
 getNextBtn.addEventListener('click', () => {
     // Incrémenter l'index de la question
     currentQuestionIndex++;
+    scoree++;
+    console.log(scoree)
+    scoreAfiche.innerText=scoree
     //console.log(currentQuestionIndex)
 
      // Vérifier s'il reste des questions
@@ -72,3 +78,9 @@ console.log(optionBtn.innerText)
 let optionBtnValue=optionBtn.innerText
  
 console.log(optionBtnValue)
+
+
+
+
+
+  
