@@ -99,7 +99,12 @@ function checkAnswer(element) {
 
     // Récupérer la bonne réponse selon l'index de la question :
     let correctAnswer = quiz_adastories.questions[currentQuestionIndex].correct_answer
-    // console.log(correctAnswer)
+    console.log('Variable correcte answer: ', correctAnswer)
+    let correctAnswerIndex = correctAnswer.indexOf('Laura');
+    console.log('Index correct answer: ', correctAnswerIndex);
+    // correctAnswer.map((element, index) => console.log(index)); // Ne marche pas
+    // correctAnswer.forEach((element, index) => console.log(index));
+
 
     // Conditions pour véréfier les réponses :
     if (selectedAnswer === correctAnswer) {
