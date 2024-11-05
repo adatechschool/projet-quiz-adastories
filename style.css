@@ -18,7 +18,7 @@ body {
     border: 0.7vw solid transparent; /* Épaisseur du bord */
     border-radius: 30px;
     background: linear-gradient(#000, #000) padding-box,
-    radial-gradient(#00C9A7, #845EC2) border-box;
+                radial-gradient(#00C9A7, #845EC2) border-box;
 
     /* TAILLE DU CONTAINER */
     width: 50vw;
@@ -32,7 +32,7 @@ body {
 }
 
 /* POLICE */
-.question, .button-options, #next-button, #replay-button, .correct, .incorrect, .gif {
+.question, .button-options, #next-button, #replay-button, .correct, .incorrect, .gif, #scoreboard {
     font-family: "Gill Sans";
     color: white;
     font-size: x-large;
@@ -162,6 +162,27 @@ button {
     margin: 3vh;
     min-width: 10vw;
     max-height: 30vh;
+}
+
+#scoreboard {
+    /* TAILLE DU TABLEAU D'AFFICHAGE */
+    height: 5vh;
+    width: 20vw;
+
+    /* POSITION */
+    display: flex;
+    position: fixed;
+    top: 5vh;
+    left: 10vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    /* LES BORDS */
+    border: 0.7vw solid greenyellow; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+    radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
 /*Ceci peut être déroutant, mais align-content détermine l'espace entre les lignes, alors que align-items détermine comment les éléments dans leur ensemble sont alignées à l'intérieur du conteneur. Quand il n'y a qu'une seule ligne, align-content n'a aucun effet.*/

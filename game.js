@@ -9,6 +9,7 @@ const question = document.querySelector('.question');
 const options = document.querySelector('.options');
 const nextBtn = document.querySelector('#next-button');
 const replayBtn = document.querySelector('#replay-button');
+const scoreboard = document.querySelector('#scoreboard');
 
 // Ici on charge la question et ses options :
 function loadQuestion() {
@@ -107,9 +108,12 @@ function checkAnswer(element) {
         // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('correct');
 
-        // On incrémente le score
+        // On incrémente le score :
         score++;
         console.log("score: ", score)
+
+        // DOM :
+        scoreboard.textContent = score;
     } else {
         // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('untrue');
