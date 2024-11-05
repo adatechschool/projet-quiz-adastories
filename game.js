@@ -113,7 +113,7 @@ function checkAnswer(element) {
         console.log("score: ", score)
 
         // DOM :
-        scoreboard.textContent = score;
+        scoreboard.textContent = `Score: ${score}`;
     } else {
         // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('untrue');
@@ -145,13 +145,13 @@ function finalScore () {
         options.appendChild(addDiv).textContent = `On est proche ! Score = ${score}/${arrayLength}`;
 
         gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2t1OWxtN2N0b2V0YzUwMWdidjVxaDF3ZWhjb3hranJrbjV4OHVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1URYTNvDM2LJoMIdxE/giphy.gif'
-        gif.alt = "Pas mal";
+        gif.alt = "On est proche !";
         options.appendChild(gif);
     } else if (score === medium) {
         // On affiche le score final
         options.appendChild(addDiv).textContent = `C\'est pas mal ! Score = ${score}/${arrayLength}`;
 
-        gif.src = ''
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExczluYjd5MGc3ZzB0ZTdiNWkwOHdncW5zMmZzbDR3cm95bDZ3eDExcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9xijGdDIMovchalhxN/giphy.gif'
         gif.alt = "Pas mal !";
         options.appendChild(gif);
     } else if (score < medium && score > 0) {

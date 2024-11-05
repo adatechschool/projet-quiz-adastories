@@ -62,7 +62,7 @@ body {
 }
 
 .options {
-    background-color: transparent;
+    /*background-color: transparent;*/
     /*background-color: pink;*/
 
     /* TAILLE DU BLOC OPTIONS */
@@ -90,6 +90,10 @@ body {
     border-radius: 30px;
     /*background: linear-gradient(#000, #000) padding-box,*/
     /*radial-gradient(#00C9A7, #845EC2) border-box;*/
+}
+
+.button-options:hover, #next-button:hover, #replay-button:hover {
+    background: #b9e1b1;
 }
 
 .correct {
@@ -182,7 +186,11 @@ button {
     border: 0.7vw solid greenyellow; /* Épaisseur du bord */
     border-radius: 30px;
     background: linear-gradient(#000, #000) padding-box,
-    radial-gradient(#00C9A7, #845EC2) border-box;
+                radial-gradient(#00C9A7, #845EC2) border-box;
+}
+
+img {
+    border: 0.7vw solid greenyellow;
 }
 
 /*Ceci peut être déroutant, mais align-content détermine l'espace entre les lignes, alors que align-items détermine comment les éléments dans leur ensemble sont alignées à l'intérieur du conteneur. Quand il n'y a qu'une seule ligne, align-content n'a aucun effet.*/
