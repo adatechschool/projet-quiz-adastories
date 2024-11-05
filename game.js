@@ -103,7 +103,7 @@ function checkAnswer(element) {
     let correctAnswerIndex = correctAnswer.indexOf('Laura');
     console.log('Index correct answer: ', correctAnswerIndex);
     // correctAnswer.map((element, index) => console.log(index)); // Ne marche pas
-    // correctAnswer.forEach((element, index) => console.log(index));
+    // correctAnswer.forEach((element, index) => console.log(index)); // Ne marche pas
 
 
     // Conditions pour véréfier les réponses :
