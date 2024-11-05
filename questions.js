@@ -40,6 +40,56 @@ export const quiz_adastories = {
             ],
             correct_answer: "Gwenaëlle"
         },
+        {
+            text: "Je suis monté.e sur le toit d'une maison et je l'ai traversé.",
+            options: [
+                "Roddick",
+                "Hugo",
+                "Marie",
+                "Lauriane",
+            ],
+            correct_answer: "Hugo"
+        },
+        {
+            text: "Je me suis évanoui.e à cause de la canicule lors d'une séance de tatouage.",
+            options: [
+                "Gwenaëlle",
+                "Angélia",
+                "Jude",
+                "Marie",
+            ],
+            correct_answer: "Angélia"
+        },
+        {
+            text: "Bourré.e, je me suis fait.e explusé.e de la soirée car j’ai commencé à pisser sur des gens.",
+            options: [
+                "Hugo",
+                "Ludovic",
+                "Daniel",
+                "Ange",
+            ],
+            correct_answer: "Daniel"
+        },
+        {
+            text: "Je suis entré.e sur du Kaaris à ma soirée de mariage.",
+            options: [
+                "Raïssa",
+                "Ludovic",
+                "Marie",
+                "Stella",
+            ],
+            correct_answer: "Raïssa"
+        },
+        {
+            text: "J'ai failli pécho la soeur d'un pote sans savoir.",
+            options: [
+                "Gwenaëlle",
+                "Ludovic",
+                "Daniel",
+                "Hugo",
+            ],
+            correct_answer: "Hugo"
+        },
         // Autres questions...
     ]
 };

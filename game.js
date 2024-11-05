@@ -10,13 +10,8 @@ const scoreAfiche = document.querySelector('#score');
 let currentQuestionIndex = 0; 
 let scoree= 0 //score 
 
-
-let firstQuestion = quiz_adastories.questions[3]; // faut que ça bouge
-// console.log(firstQuestion);0
-
 function loadQuestion() {
     let currentQuestion = quiz_adastories.questions[currentQuestionIndex];
-    // console.log(currentQuestion);
 
     getOptions.innerText =""
     // injection du texte dans le DOM :
@@ -40,10 +35,8 @@ function loadQuestion() {
 getNextBtn.addEventListener('click', () => {
     // Incrémenter l'index de la question
     currentQuestionIndex++;
-    
-    //console.log(currentQuestionIndex)
 
-     // Vérifier s'il reste des questions
+    // Vérifier s'il reste des questions
     if (currentQuestionIndex < quiz_adastories.questions.length) {
         // Afficher la question suivante
         loadQuestion();
@@ -73,7 +66,7 @@ function checkAnswer (pointer) {
     const clickedBtn = pointer.target // permet de récupérer notre bouton
     // On récupère la valeur ici :
     const selectedAnswer = clickedBtn.textContent;
-    console.log(selectedAnswer)
+    // console.log(selectedAnswer)
 
     // On désactive les autres boutons
     const allBtn = document.querySelectorAll('.button-options');
@@ -91,7 +84,7 @@ function checkAnswer (pointer) {
         clickedBtn.classList.add('untrue');
     }
 
-  getNextBtn.disabled = false;
+    getNextBtn.disabled = false;
 }
 
 loadQuestion();
