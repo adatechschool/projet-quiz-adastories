@@ -14,18 +14,9 @@ let scoree= 0 //score
 let firstQuestion = quiz_adastories.questions[3]; // faut que ça bouge
 // console.log(firstQuestion);0
 
-// Ici on affiche les options
-// for (const option of firstQuestion.options) {
-//     const addBtnOption = document.createElement("button");
-//
-//     getOptions.appendChild(addBtnOption);
-//     addBtnOption.classList.add('button-options') ;
-//     addBtnOption.innerText = option;
-// }
-
 function loadQuestion() {
     let currentQuestion = quiz_adastories.questions[currentQuestionIndex];
-    console.log(currentQuestion);
+    // console.log(currentQuestion);
 
     getOptions.innerText =""
     // injection du texte dans le DOM :
@@ -38,7 +29,12 @@ function loadQuestion() {
         getOptions.appendChild(addBtnOption);
         addBtnOption.classList.add('button-options') ;
         addBtnOption.innerText = option;
+
+        // Appelle la fonction checkAnswer pour vérifier la réponse
+        addBtnOption.addEventListener('click', checkAnswer);
     }
+
+    getNextBtn.disabled = true;
 }
 
 getNextBtn.addEventListener('click', () => {
@@ -50,37 +46,48 @@ getNextBtn.addEventListener('click', () => {
     //console.log(currentQuestionIndex)
 
      // Vérifier s'il reste des questions
-  if (currentQuestionIndex < quiz_adastories.questions.length) {
-    // Afficher la question suivante
-    loadQuestion();
-  } else {
-   // Si plus de questions, indiquer la fin du quiz
-    getQuestion.innerText = 'le quizz est fini';
-    getOptions.innerHTML = ''; // Effacer les options
-    getNextBtn.style.display = 'none'; // Cacher le bouton Suivant
-    getReplayBtn.style.display = 'inline-block'; // Afficher le bouton replay
-  }
+    if (currentQuestionIndex < quiz_adastories.questions.length) {
+        // Afficher la question suivante
+        loadQuestion();
+    } else {
+       // Si plus de questions, indiquer la fin du quiz
+        getQuestion.innerText = 'le quizz est fini';
+        getOptions.innerHTML = ''; // Effacer les options
+        getNextBtn.style.display = 'none'; // Cacher le bouton Suivant
+        getReplayBtn.style.display = 'inline-block'; // Afficher le bouton replay
+    }
 })
-
-loadQuestion();
 
 getReplayBtn.addEventListener('click', () => {
     currentQuestionIndex = 0
     getReplayBtn.style.display = 'none'
     getNextBtn.style.display = 'inline-block';
-     loadQuestion()
+    loadQuestion()
 })
 
-// évènement au clique sur les options
-const optionBtn=document.querySelector(".button-options")
+// Évènement au clique sur les options :
+// La fonction checkAnswer est appelé dans la fonction loadQuestiona avec addEventListerner
+function checkAnswer (pointer) {
+    //Avec la méthode 'target' on "pointe" la zone dont on veut récupérer la valeur :
+    const clickedBtn = pointer.target // permet de récupérer notre bouton
+    // On récupère la valeur ici :
+    const selectedAnswer = clickedBtn.textContent;
+    console.log(selectedAnswer)
 
-console.log(optionBtn.innerText)
-let optionBtnValue=optionBtn.innerText
- 
-console.log(optionBtnValue)
+    // On désactive les autres boutons
+    const allBtn = document.querySelectorAll('.button-options');
+    for (const button of allBtn) {
+        button.disabled = true;
+    }
 
+    // Condition pour vérifier la réponse
+    if (selectedAnswer === quiz_adastories.questions[currentQuestionIndex].correct_answer) {
+        clickedBtn.classList.add('correct');
+    } else {
+        clickedBtn.classList.add('untrue');
+    }
 
+    getNextBtn.disabled = false;
+}
 
-
-
-  
+loadQuestion();

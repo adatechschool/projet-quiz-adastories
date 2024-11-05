@@ -8,7 +8,7 @@ body {
     /* margin: 0; */ /* en conflit avec flexbox */
     display: flex;
     justify-content: center;  /* aligne les éléments horizontalement */
-    height: 100vh; /* obligé de donné une taille au body pour mettre en centre verticalement */
+    /*height: 100vh; !* obligé de donné une taille au body pour mettre en centre verticalement *!*/
     align-items: center; /* aligne les éléments verticalement */
 }
 
@@ -72,7 +72,7 @@ body {
 
     /* TAILLE DU BLOC OPTIONS */
     width: 45vw;
-    max-height: 30vh;
+    max-height: 50vh;
     margin-top: 5vh;
 
     /* POSITION / CENTRAGE */
@@ -115,9 +115,20 @@ body {
     background: linear-gradient(#000, #000) padding-box, radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
-#score { color:rgb(0, 0, 0);
+.correct {
+    color: #00C9A7;
+    border: 0.5vw solid #00C9A7;
+}
+
+.untrue {
+    color: #FF0000;
+    border: 0.5vw solid #FF0000;
+}
+
+#score {
+    color:rgb(0, 0, 0);
     background-color: rgb(241, 245, 249);
     width: 100px;
     height: 80px;
     
-    }
+}
