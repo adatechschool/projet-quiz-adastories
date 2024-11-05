@@ -46,6 +46,21 @@ function loadQuestion() {
             addBtnOption.classList.add('correct')
             console.log("true")
           }
+          console.log(bouton)
+          
+          const newh1 = "Nouveau titre ✨"
+          
+          h1.innerText = newh1
+          
+          // function getValue(){
+          //  const color = document.getElementById("in").value;
+          //  return color
+          // }
+          
+          bouton.addEventListener('click',() => {
+             h1.style.color = input.value
+          })
+          
           else {
             addBtnOption.classList.add('untrue')
             console.log("false")
