@@ -31,11 +31,6 @@ body {
     flex-direction: column; /* permet de mettre en colonne */
     align-items: center; /* centre les blocs au centre */
     justify-content: space-between; /* met en espace entre les blocs */
-
-    /* N'est plus utile avec le paramètres de position plus haut */
-    /*margin-top:50vh; !*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*!*/
-    /*transform: translateY(-50%);!* pour le decal surl'axe du Y(décale a sa propre hauteur)*!*/
-    /*text-align: center;!*fait centrer le bouton suivant *!*/
 }
 
 /* POLICE */

@@ -60,7 +60,7 @@ nextBtn.addEventListener('click', () => {
         replayBtn.style.display = 'inline-block'; // Afficher le bouton Rejouer
 
         // On appelle la fonction bravo pour faire afficher un GIF selon le score
-        bravo();
+        finalScore();
     }
 })
 
@@ -100,43 +100,61 @@ function checkAnswer(element) {
     // Récupérer la bonne réponse selon l'index de la question :
     let correctAnswer = quiz_adastories.questions[currentQuestionIndex].correct_answer
     console.log('Variable correcte answer: ', correctAnswer)
-    let correctAnswerIndex = correctAnswer.indexOf('Laura');
-    console.log('Index correct answer: ', correctAnswerIndex);
-    // correctAnswer.map((element, index) => console.log(index)); // Ne marche pas
-    // correctAnswer.forEach((element, index) => console.log(index)); // Ne marche pas
 
 
     // Conditions pour véréfier les réponses :
     if (selectedAnswer === correctAnswer) {
-        // console.log('La réponse est bonne')
         // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('correct');
 
-        // on incrémente le score
+        // On incrémente le score
         score++;
         console.log("score: ", score)
     } else {
-        // console.log('La réponse est fausse')
         // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('untrue');
     }
 }
 
 // Ici une fonction qui affiche un GIF selon le score
-function bravo () {
+function finalScore () {
     const arrayLength = quiz_adastories.questions.length;
+    const medium = arrayLength/2;
+    console.log("moitié: ", medium);
 
-    if (score === quiz_adastories.questions.length) {
-        console.log('Vous êtes trop forts !');
+    // Pour permettre la réutilisation dans la condition qui suit :
+    const gif = document.createElement('img');
+    const addDiv = document.createElement('div');
+    addDiv.classList.add('gif')
+    gif.className = "gif";
+
+    if (score === arrayLength) {
+        // On affiche le score final
+        options.appendChild(addDiv).textContent = `Vous êtes trop forts ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGJ3NXNtNGRqNTMza3k5NnpuZjdhZXdyZ21zejgzZHZ4bjVqbXN5biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MOWPkhRAUbR7i/giphy.gif'
+        gif.alt = "Félicitations";
+        options.appendChild(gif);
+    } else if (score > medium) {
+
+        // On affiche le score final
+        options.appendChild(addDiv).textContent = `On est proche ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2t1OWxtN2N0b2V0YzUwMWdidjVxaDF3ZWhjb3hranJrbjV4OHVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1URYTNvDM2LJoMIdxE/giphy.gif'
+        gif.alt = "Pas mal";
+        options.appendChild(gif);
+    } else if (score === medium) {
+
+        // On affiche le score final
         const addDiv = document.createElement('div');
         addDiv.classList.add('gif')
-        options.appendChild(addDiv).textContent = `Vous êtes trop forts ! Score = ${score}/${arrayLength}`;
-    } else if (score > 3) {
-        console.log('On est proche !')
-    } else if ( score === 2) { // mettre un modulo de 2
-        console.log('C\'est pas mal !')
-    } else {
-        console.log('Allez, tu peux mieux faire !')
+        options.appendChild(addDiv).textContent = `C\'est pas mal ! Score = ${score}/${arrayLength}`;
+    } else if (score < medium) {
+
+        // On affiche le score final
+        const addDiv = document.createElement('div');
+        addDiv.classList.add('gif')
+        options.appendChild(addDiv).textContent = `Allez, tu peux mieux faire ! Score = ${score}/${arrayLength}`;
     }
 }
 

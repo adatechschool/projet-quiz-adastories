@@ -7,7 +7,7 @@ body {
     /* margin: 0; */ /* en conflit avec flexbox */
     display: flex;
     justify-content: center;  /* aligne les éléments horizontalement */
-    height: 100vh; /* obligé de donné une taille au body pour mettre en centre verticalement */
+    /*height: 100vh; !* obligé de donné une taille au body pour mettre en centre verticalement *!*/
     align-items: center; /* aligne les éléments verticalement */
 }
 
@@ -63,10 +63,11 @@ body {
 
 .options {
     background-color: transparent;
+    /*background-color: pink;*/
 
     /* TAILLE DU BLOC OPTIONS */
     width: 45vw;
-    max-height: 30vh;
+    max-height: 50vh;
     margin-top: 5vh;
 
     /* POSITION */
@@ -158,7 +159,9 @@ button {
 
 /* AFFICHAGE GIF */
 .gif {
-
+    margin: 3vh;
+    min-width: 10vw;
+    max-height: 30vh;
 }
 
 /*Ceci peut être déroutant, mais align-content détermine l'espace entre les lignes, alors que align-items détermine comment les éléments dans leur ensemble sont alignées à l'intérieur du conteneur. Quand il n'y a qu'une seule ligne, align-content n'a aucun effet.*/

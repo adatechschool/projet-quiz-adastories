@@ -50,6 +50,16 @@ export const quiz_adastories = {
             ],
             correct_answer: "Angélia"
         },
+        {
+            text: "Bourré.e, je me suis fait.e explusé.e de la soirée car j’ai commencé à pisser sur des gens.",
+            options: [
+                "Hugo",
+                "Ludovic",
+                "Daniel",
+                "Ange",
+            ],
+            correct_answer: "Daniel"
+        },
         // Autres questions...
     ]
 };
