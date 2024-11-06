@@ -40,18 +40,7 @@ export const quiz_adastories = {
             ],
             correct_answer: "Gwenaëlle"
         },
-<<<<<<< HEAD
-        {
-            text: "J'ai dormi dans la cage d'escalier d'un immeuble en sortant de soirée parce que je n'avais plus de transports pour rentrer chez moi.",
-            options: [
-                "Léandre",
-                "Stella",
-                "Angélia",
-                "Ludovic"
-            ],
-            correct_answer: "Stella"
-        },
-=======
+        // Au-dessus de cette ligne il y a 4 questions
         // {
         //     text: "J'ai dormi dans la cage d'escalier d'un immeuble en sortant de soirée parce que je n'avais plus de transports pour rentrer chez moi.",
         //     options: [
@@ -62,8 +51,6 @@ export const quiz_adastories = {
         //     ],
         //     correct_answer: "Stella"
         // },
->>>>>>> 2b44307 (Clean code and add stories)
-        // Au-dessus de cette ligne il y a 4 questions
         // {
         //     text: "Je suis monté.e sur le toit d'une maison et je l'ai traversé.",
         //     options: [
@@ -85,11 +72,7 @@ export const quiz_adastories = {
         //     correct_answer: "Angélia"
         // },
         // {
-<<<<<<< HEAD
-        //     text: "Bourré.e, je me suis fait.e explusé.e de la soirée car j’ai commencé à pisser sur des gens.",
-=======
-        //     text: "Bourré.e, je me suis fait.e expulser de la soirée car j’ai commencé à pisser sur des gens.",
->>>>>>> 2b44307 (Clean code and add stories)
+        //     text: "Bourré.e, je me suis fait.e expluser de la soirée car j’ai commencé à pisser sur des gens.",
         //     options: [
         //         "Hugo",
         //         "Ludovic",
@@ -119,7 +102,7 @@ export const quiz_adastories = {
         //     correct_answer: "Hugo"
         // },
         // {
-        //     text: "J'adore les bublleteas !",
+        //     text: "J'adore les bubbleteas !",
         //     options: [
         //         "Gwenaëlle",
         //         "Angélia",
@@ -127,7 +110,8 @@ export const quiz_adastories = {
         //         "Raïssa",
         //     ],
         //     correct_answer: "Angélia"
-        // },{
+        // },
+        // {
         //     text: "J'étais sur le quai de la gare et le train arrive. Je ne fais pas attention et il repart et c'est au bout de 4 minutes que je me rends compte que j'avais raté le dernier train.",
         //     options: [
         //         "Leyane",

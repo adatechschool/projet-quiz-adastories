@@ -96,6 +96,35 @@ body {
     background: #b9e1b1;
 }
 
+.button-options:hover {
+    /* CURSEUR PERSONNALISÉ */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍆</text></svg>"), pointer;
+}
+
+#next-button:hover {
+    /* CURSEUR PERSONNALISÉ */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐊</text></svg>"), pointer;
+}
+
+#replay-button:hover {
+    /* CURSEUR PERSONNALISÉ */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐓</text></svg>"), pointer;
+}
+
+#next-button, #replay-button {
+    /*background-color: blueviolet;*/
+
+    /* POSITION */
+    margin: 3vh; /* marge entre le bas et le bouton */
+    padding: 1rem 1rem;
+
+    /* LES BORDS */
+    border: 0.5vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    /*background: linear-gradient(#000, #000) padding-box,*/
+    /*radial-gradient(#00C9A7, #845EC2) border-box;*/
+}
+
 .correct {
     /* TAILLE DU BOUTON */
     height: 6vh;
@@ -134,20 +163,6 @@ body {
     /*background-color: cadetblue;*/
 }
 
-#next-button, #replay-button {
-    /*background-color: blueviolet;*/
-
-    /* POSITION */
-    margin: 3vh; /* marge entre le bas et le bouton */
-    padding: 1rem 1rem;
-
-    /* LES BORDS */
-    border: 0.5vw solid transparent; /* Épaisseur du bord */
-    border-radius: 30px;
-    /*background: linear-gradient(#000, #000) padding-box,*/
-    /*radial-gradient(#00C9A7, #845EC2) border-box;*/
-}
-
 button {
     cursor: pointer;
     /*appearance: none;*/
@@ -168,25 +183,42 @@ button {
     max-height: 30vh;
 }
 
-#scoreboard {
-    /* TAILLE DU TABLEAU D'AFFICHAGE */
-    height: 5vh;
-    width: 20vw;
+.score-container {
+    /* TAILLE */
+    min-width: 70vw;
 
     /* POSITION */
     display: flex;
     position: fixed;
     top: 5vh;
     left: 10vw;
-    text-align: center;
-    justify-content: center;
+    right: 10vh;
+    justify-content: space-between;
     align-items: center;
+}
+
+#scoreboard {
+    /* TAILLE DU TABLEAU D'AFFICHAGE */
+    height: 5vh;
+    width: 20vw;
 
     /* LES BORDS */
     border: 0.7vw solid greenyellow; /* Épaisseur du bord */
     border-radius: 30px;
     background: linear-gradient(#000, #000) padding-box,
                 radial-gradient(#00C9A7, #845EC2) border-box;
+}
+
+#progress-bar {
+    /* TAILLE DU TABLEAU D'AFFICHAGE */
+    height: 1vh;
+    width: 35vw;
+
+    /* LES BORDS */
+    border: 0.7vw solid greenyellow; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+    radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
 img {

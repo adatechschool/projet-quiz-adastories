@@ -33,10 +33,6 @@ function loadQuestion() {
         addBtnOption.addEventListener('click', checkAnswer);
     }
 
-    // Ajouter l'écouteur d'événement qui va vérifier la réponse
-    // addBtnOption.addEventListener('click', checkAnswer); // On n'y a pas accés car n'est pas dans la boucle
-    // options.addEventListener('click', checkAnswer); // Génère un bug car le addEventListener est sur le container option => ça élargie la zone pour le target
-
     // Après que la réponse soit vérifiée par la fonction checkAnswer, on désactive à nouveau le bouton suivant avant de sélectionner une option/réponse.
     nextBtn.disabled = true;
 }
@@ -49,11 +45,8 @@ nextBtn.addEventListener('click', () => {
 
     // Vérifier s'il reste des questions
     if (currentQuestionIndex < quiz_adastories.questions.length) {
-        // console.log("On n'est pas à la fin");
-        // Afficher la question suivante
         loadQuestion();
     } else {
-        // console.log("Il n'y a plus de question");
         // Si plus de questions, indiquer la fin du quiz
         question.innerText = 'Le quiz est terminé !';
         options.innerHTML = ''; // Effacer les options
@@ -62,11 +55,6 @@ nextBtn.addEventListener('click', () => {
 
         // On appelle la fonction bravo pour faire afficher un GIF selon le score
         finalScore();
-       // Si plus de questions, indiquer la fin du quiz
-        getQuestion.innerText = 'Le quiz est fini !';
-        getOptions.innerHTML = ''; // Effacer les options
-        getNextBtn.style.display = 'none'; // Cache le bouton Suivant
-        getReplayBtn.style.display = 'inline-block'; // Affiche le bouton replay
     }
 })
 
@@ -108,7 +96,7 @@ function checkAnswer(element) {
     console.log('Variable correcte answer: ', correctAnswer)
 
 
-    // Conditions pour véréfier les réponses :
+    // Conditions pour vérifier les réponses :
     if (selectedAnswer === correctAnswer) {
         // clickedBtn.classList.remove('button-options') // On peut apparemment mettre plusieurs class dans une div
         clickedBtn.classList.add('correct');
@@ -163,7 +151,7 @@ function finalScore () {
         // On affiche le score final
         options.appendChild(addDiv).textContent = `Allez, tu peux mieux faire ! Score = ${score}/${arrayLength}`;
 
-        gif.src = './images/DALL·E Manga Illustration (1).webp'
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2sxNjcxYngxMTF2a3Rha3VsdGhpbWI5bHVvc3l1MG5wMWlseHZ0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R4B99GWm99hn3tFlz0/giphy.gif'
         gif.alt = "Peux mieux faire !";
         options.appendChild(gif);
     } else if (score === 0) {
