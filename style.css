@@ -97,8 +97,9 @@ body {
     /* POSITION / CENTRAGE */
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     align-content: space-between;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
 }
 
 /* Cette classe doit être ajoutée au JS pour pouvoir l'appliquer à notre écran */
