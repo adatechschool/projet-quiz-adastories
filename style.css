@@ -134,3 +134,14 @@ body {
     border: 0.5vw solid #FF0000;
 }
 
+<<<<<<< HEAD
+=======
+#score {
+    position: relative;
+    top: 40px; left: 40px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(241, 245, 249);
+    width: 100px;
+    height: 80px;
+}
+>>>>>>> origin
