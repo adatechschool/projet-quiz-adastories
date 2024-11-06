@@ -87,6 +87,13 @@ function checkAnswer (pointer) {
 
         score++;
         scoreAffiche.innerText = score;
+
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+          
     } else {
         clickedBtn.classList.add('untrue'); // CSS
     }

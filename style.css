@@ -119,6 +119,7 @@ body {
 
 .button-options:hover, #next-button:hover, #replay-button:hover {
     background: #b9e1b1;
+    box-shadow: 0 12px 16px 0 rgba(255,255,255,0.24), 0 17px 50px 0 rgba(255,255,255,0.19);
 }
 
 .button-options:hover {
@@ -135,6 +136,40 @@ body {
     /* CURSEUR PERSONNALISÉ */
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐓</text></svg>"), pointer;
 }
+
+button.button-options:active,#next-button:active,#replay-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+button.untrue:hover{
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
 
 #next-button, #replay-button {
     /*background-color: blueviolet;*/
