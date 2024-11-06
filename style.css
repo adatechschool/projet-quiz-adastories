@@ -11,16 +11,26 @@ body {
     /*height: 100vh; !* obligé de donné une taille au body pour mettre en centre verticalement *!*/
     align-items: center; /* aligne les éléments verticalement */
 }
+
 #score {
     position: relative;
-    top: 40px; left: 40px;
-    color:rgb(0, 0, 0);
-    background-color: rgb(241, 245, 249);
-    width: 100px;
+    top: -250px; left: -200px;
+    color:ivory;
+    /* background-color: rgb(241, 245, 249); */
+    background-color: #000000;
+    width: 80px;
     height: 80px;
-    text-align : left;
 
+    /* BORDS */
+    border: 0.7vw solid #845EC2;
+    border-radius: 30px;
+
+    /* CENTRER LE TEXTE */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #quiz-container {
     /*background-color: #000000;*/ /* En conflit avec le background quelques lignes plus bas */
 
@@ -48,7 +58,7 @@ body {
 }
 
 /* POLICE */
-.question, .button-options, #next-button, #replay-button {
+.question, .button-options, #next-button, #replay-button, #score {
     font-family: "Gill Sans";
     color: white;
     font-size: x-large;
@@ -134,11 +144,4 @@ body {
     border: 0.5vw solid #FF0000;
 }
 
-#score {
-    position: relative;
-    top: 40px; left: 40px;
-    color:rgb(0, 0, 0);
-    background-color: rgb(241, 245, 249);
-    width: 100px;
-    height: 80px;
-}
+
