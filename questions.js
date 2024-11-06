@@ -40,6 +40,16 @@ export const quiz_adastories = {
             ],
             correct_answer: "Gwenaëlle"
         },
+        {
+            text: "J'ai dormi dans la cage d'escalier d'un immeuble en sortant de soirée parce que je n'avais plus de transports pour rentrer chez moi.",
+            options: [
+                "Léandre",
+                "Stella",
+                "Angélia",
+                "Ludovic"
+            ],
+            correct_answer: "Stella"
+        },
         // Au-dessus de cette ligne il y a 4 questions
         // {
         //     text: "Je suis monté.e sur le toit d'une maison et je l'ai traversé.",
@@ -84,7 +94,7 @@ export const quiz_adastories = {
         // {
         //     text: "J'ai failli pécho la soeur d'un pote sans savoir.",
         //     options: [
-        //         "Gwenaëlle",
+        //         "Léandre",
         //         "Ludovic",
         //         "Daniel",
         //         "Hugo",
@@ -106,7 +116,7 @@ export const quiz_adastories = {
         //         "Leyane",
         //         "Giau",
         //         "Angélia",
-        //         "Marie",
+        //         "Léandre",
         //     ],
         //     correct_answer: "Angélia"
         // },
