@@ -116,7 +116,7 @@ function finalScore () {
         getOptions.appendChild(gif);
     } else if (score > medium) {
         // On affiche le score final
-        options.appendChild(addDiv).textContent = `On est proche ! Score = ${score}/${arrayLength}`;
+        getOptions.appendChild(addDiv).textContent = `On est proche ! Score = ${score}/${arrayLength}`;
 
         gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2t1OWxtN2N0b2V0YzUwMWdidjVxaDF3ZWhjb3hranJrbjV4OHVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1URYTNvDM2LJoMIdxE/giphy.gif'
         gif.alt = "On est proche !";
