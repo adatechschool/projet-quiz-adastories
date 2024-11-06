@@ -49,6 +49,9 @@ getNextBtn.addEventListener('click', () => {
         getOptions.innerHTML = ''; // Effacer les options
         getNextBtn.style.display = 'none'; // Cache le bouton Suivant
         getReplayBtn.style.display = 'inline-block'; // Affiche le bouton replay
+
+        // On appelle la fonction bravo pour faire afficher un GIF selon le score
+        finalScore();
     }
 })
 
@@ -91,4 +94,56 @@ function checkAnswer (pointer) {
     getNextBtn.disabled = false; // Réactive le bouton
 }
 
+// Ici une fonction qui affiche un GIF selon le score
+// Il faut nettoyer c'est pas propre
+function finalScore () {
+    const arrayLength = quiz_adastories.questions.length;
+    const medium = arrayLength/2;
+    console.log("moitié: ", medium);
+
+    // Pour permettre la réutilisation dans la condition qui suit :
+    const gif = document.createElement('img');
+    const addDiv = document.createElement('div');
+    addDiv.classList.add('gif')
+    gif.className = "gif";
+
+    if (score === arrayLength) {
+        // On affiche le score final
+        getOptions.appendChild(addDiv).textContent = `Vous êtes trop forts ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGJ3NXNtNGRqNTMza3k5NnpuZjdhZXdyZ21zejgzZHZ4bjVqbXN5biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MOWPkhRAUbR7i/giphy.gif'
+        gif.alt = "Félicitations";
+        getOptions.appendChild(gif);
+    } else if (score > medium) {
+        // On affiche le score final
+        options.appendChild(addDiv).textContent = `On est proche ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2t1OWxtN2N0b2V0YzUwMWdidjVxaDF3ZWhjb3hranJrbjV4OHVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1URYTNvDM2LJoMIdxE/giphy.gif'
+        gif.alt = "On est proche !";
+        getOptions.appendChild(gif);
+    } else if (score === medium) {
+        // On affiche le score final
+        getOptions.appendChild(addDiv).textContent = `C\'est pas mal ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExczluYjd5MGc3ZzB0ZTdiNWkwOHdncW5zMmZzbDR3cm95bDZ3eDExcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9xijGdDIMovchalhxN/giphy.gif'
+        gif.alt = "Pas mal !";
+        getOptions.appendChild(gif);
+    } else if (score < medium && score > 0) {
+        // On affiche le score final
+        getOptions.appendChild(addDiv).textContent = `Allez, tu peux mieux faire ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2sxNjcxYngxMTF2a3Rha3VsdGhpbWI5bHVvc3l1MG5wMWlseHZ0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R4B99GWm99hn3tFlz0/giphy.gif'
+        gif.alt = "Peux mieux faire !";
+        getOptions.appendChild(gif);
+    } else if (score === 0) {
+        // On affiche le score final
+        getOptions.appendChild(addDiv).textContent = `C\'est nul ! Score = ${score}/${arrayLength}`;
+
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExejViYnNuMmZmYThiMHFiNjBjMTNnZHp0MjZtd3dzdjR1bDYzY2UzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/06ICMm65hcawzW3Dst/giphy.gif'
+        gif.alt = "Nul !";
+        getOptions.appendChild(gif);
+    }
+}
+
+// Charge la question à l'ouverture
 loadQuestion();

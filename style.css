@@ -58,7 +58,7 @@ body {
 }
 
 /* POLICE */
-.question, .button-options, #next-button, #replay-button, #score {
+.question, .button-options, #next-button, #replay-button, #score, .gif {
     font-family: "Gill Sans";
     color: white;
     font-size: x-large;
@@ -117,8 +117,23 @@ body {
     radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
-.button-container {
-    /*background-color: cadetblue;*/
+.button-options:hover, #next-button:hover, #replay-button:hover {
+    background: #b9e1b1;
+}
+
+.button-options:hover {
+    /* CURSEUR PERSONNALISÉ */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍆</text></svg>"), pointer;
+}
+
+#next-button:hover {
+    /* CURSEUR PERSONNALISÉ */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐊</text></svg>"), pointer;
+}
+
+#replay-button:hover {
+    /* CURSEUR PERSONNALISÉ */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐓</text></svg>"), pointer;
 }
 
 #next-button, #replay-button {
@@ -144,4 +159,16 @@ body {
     border: 0.5vw solid #FF0000;
 }
 
+/* AFFICHAGE GIF */
+.gif {
+    margin: 3vh;
+    min-width: 10vw;
+    max-height: 30vh;
 
+    /* TEXTE CENTRÉ */
+    text-align: center;
+}
+
+img {
+    border: 0.7vw solid greenyellow;
+}
