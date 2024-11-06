@@ -45,7 +45,7 @@ export const quiz_adastories = {
         //     options: [
         //         "Léandre",
         //         "Stella",
-        //         "Angélia",
+        //         "Lila",
         //         "Ludovic"
         //     ],
         //     correct_answer: "Stella"
