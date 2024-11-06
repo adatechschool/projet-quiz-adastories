@@ -8,7 +8,7 @@ const getReplayBtn = document.querySelector('#replay-button');
 const scoreAffiche = document.querySelector('#score');
 
 let currentQuestionIndex = 0; 
-let score= 0;
+let score = 0;
 
 // Ici on charge le question :
 function loadQuestion() {
