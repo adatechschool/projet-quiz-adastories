@@ -128,7 +128,7 @@ function finalScore () {
         // On affiche le score final
         getOptions.appendChild(addDiv).textContent = `On est proche ! Score = ${score}/${arrayLength}`;
 
-        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2t1OWxtN2N0b2V0YzUwMWdidjVxaDF3ZWhjb3hranJrbjV4OHVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1URYTNvDM2LJoMIdxE/giphy.gif'
+        gif.src = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzVoNmZ3N2x0ZXR3a283MTJleWk4cWJjeDRmd3JwOWZoN3U2ejVibyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NUwoRZzHc2Bws/giphy.gif'
         gif.alt = "On est proche !";
         gifContainer.appendChild(gif);
     } else if (score === medium) {
