@@ -11,7 +11,16 @@ body {
     /*height: 100vh; !* obligé de donné une taille au body pour mettre en centre verticalement *!*/
     align-items: center; /* aligne les éléments verticalement */
 }
+#score {
+    position: relative;
+    top: 40px; left: 40px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(241, 245, 249);
+    width: 100px;
+    height: 80px;
+    text-align : left;
 
+}
 #quiz-container {
     /*background-color: #000000;*/ /* En conflit avec le background quelques lignes plus bas */
 
@@ -125,12 +134,3 @@ body {
     border: 0.5vw solid #FF0000;
 }
 
-#score {
-    position: relative;
-    top: 40px; left: 40px;
-    color:rgb(0, 0, 0);
-    background-color: rgb(241, 245, 249);
-    width: 100px;
-    height: 80px;
-
-}
