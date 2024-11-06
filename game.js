@@ -53,6 +53,7 @@ nextBtn.addEventListener('click', () => {
         // Afficher la question suivante
         loadQuestion();
     } else {
+<<<<<<< HEAD
         // console.log("Il n'y a plus de question");
         // Si plus de questions, indiquer la fin du quiz
         question.innerText = 'Le quiz est terminé !';
@@ -62,6 +63,13 @@ nextBtn.addEventListener('click', () => {
 
         // On appelle la fonction bravo pour faire afficher un GIF selon le score
         finalScore();
+=======
+       // Si plus de questions, indiquer la fin du quiz
+        getQuestion.innerText = 'Le quiz est fini !';
+        getOptions.innerHTML = ''; // Effacer les options
+        getNextBtn.style.display = 'none'; // Cache le bouton Suivant
+        getReplayBtn.style.display = 'inline-block'; // Affiche le bouton replay
+>>>>>>> 2b44307 (Clean code and add stories)
     }
 })
 

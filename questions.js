@@ -40,6 +40,7 @@ export const quiz_adastories = {
             ],
             correct_answer: "Gwenaëlle"
         },
+<<<<<<< HEAD
         {
             text: "J'ai dormi dans la cage d'escalier d'un immeuble en sortant de soirée parce que je n'avais plus de transports pour rentrer chez moi.",
             options: [
@@ -50,6 +51,18 @@ export const quiz_adastories = {
             ],
             correct_answer: "Stella"
         },
+=======
+        // {
+        //     text: "J'ai dormi dans la cage d'escalier d'un immeuble en sortant de soirée parce que je n'avais plus de transports pour rentrer chez moi.",
+        //     options: [
+        //         "Léandre",
+        //         "Stella",
+        //         "Angélia",
+        //         "Ludovic"
+        //     ],
+        //     correct_answer: "Stella"
+        // },
+>>>>>>> 2b44307 (Clean code and add stories)
         // Au-dessus de cette ligne il y a 4 questions
         // {
         //     text: "Je suis monté.e sur le toit d'une maison et je l'ai traversé.",
@@ -72,7 +85,11 @@ export const quiz_adastories = {
         //     correct_answer: "Angélia"
         // },
         // {
+<<<<<<< HEAD
         //     text: "Bourré.e, je me suis fait.e explusé.e de la soirée car j’ai commencé à pisser sur des gens.",
+=======
+        //     text: "Bourré.e, je me suis fait.e expulser de la soirée car j’ai commencé à pisser sur des gens.",
+>>>>>>> 2b44307 (Clean code and add stories)
         //     options: [
         //         "Hugo",
         //         "Ludovic",
