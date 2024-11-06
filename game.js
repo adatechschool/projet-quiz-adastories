@@ -45,7 +45,7 @@ getNextBtn.addEventListener('click', () => {
         loadQuestion();
     } else {
        // Si plus de questions, indiquer la fin du quiz
-        getQuestion.innerText = 'Le quizz est fini';
+        getQuestion.innerText = 'Le quiz est fini !';
         getOptions.innerHTML = ''; // Effacer les options
         getNextBtn.style.display = 'none'; // Cache le bouton Suivant
         getReplayBtn.style.display = 'inline-block'; // Affiche le bouton replay
