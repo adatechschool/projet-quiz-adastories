@@ -1,62 +1,134 @@
 body {
-    background: radial-gradient(circle, #fedcff 0%, rgba(224,145,226,1) 60%);
-    /* background-color: #E5B1E6; couleur de fond */
-    margin: 0 auto;
-    margin-top: 50vh; /*Contenu placé à la moitié de la hauteur du viewport*/
-    transform: translateY(-50%); /*Decale le contenu de 50% de sa propre hauteur sur l'axe des Y*/
-    text-align: center; /*Centre le texte */
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;  
-}
+    background-color: #000000;
 
-.question {
-    font-size :40px; /*taille de la police*/
-    color: black; /*Couleur de police*/
-    border: 3px solid transparent; /*contour plein et transparent*/
-    background: radial-gradient(circle, #fedcff 0%, rgba(224,145,226,1) 100%) padding-box, /*Intérieur du bouton*/
-                linear-gradient(to right, darkblue, darkorchid) border-box; /*contour du bouton*/
-    border-radius:10px; /*Arrondir les angles*/
-    /* max-width: fit-content; la largeur du bouton correspond au contenu */
-    max-width: 60vw;
-    margin:0 auto;
-    margin-bottom: 25px;
-    text-align: center;
+    /* TAILLE DU BODY */
+    min-height: 100vh; /* taille minimale */
+
+    /* POSITION */
+    /* margin: 0; */ /* en conflit avec flexbox */
+    display: flex;
+    justify-content: center;  /* aligne les éléments horizontalement */
+    /*height: 100vh; !* obligé de donné une taille au body pour mettre en centre verticalement *!*/
+    align-items: center; /* aligne les éléments verticalement */
 }
 
 #quiz-container {
-    margin: auto;
+    /*background-color: #000000;*/ /* En conflit avec le background quelques lignes plus bas */
+
+    /* LES BORDS */
+    border: 0.7vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+                radial-gradient(#00C9A7, #845EC2) border-box;
+
+    /* TAILLE DU CONTAINER */
+    /* Il semble que donner une taille au container permet après de jouer avec flexbox et de la positionner sur notre écran */
+    width: 50vw;
+    height: fit-content;
+
+    /* POSITION DES ÉLÉMENTS À L'INTÉRIEUR */
+    display: flex; /* doit être "appeler" pour utiliser les paramètres qui positionnent */
+    flex-direction: column; /* permet de mettre en colonne */
+    align-items: center; /* centre les blocs au centre */
+    justify-content: space-between; /* met en espace entre les blocs */
+
+    /* N'est plus utile avec le paramètres de position plus haut */
+    /*margin-top:50vh; !*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*!*/
+    /*transform: translateY(-50%);!* pour le decal surl'axe du Y(décale a sa propre hauteur)*!*/
+    /*text-align: center;!*fait centrer le bouton suivant *!*/
 }
 
-.options{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, auto));
-    /* max-width: fit-content; */
+/* POLICE */
+.question, .button-options, #next-button, #replay-button {
+    font-family: "Gill Sans";
+    color: white;
+    font-size: x-large;
 }
 
-button {
-    background: radial-gradient(circle, #fedcff 0%, rgba(224,145,226,1) 100%) padding-box,
-                linear-gradient(to right, darkblue, darkorchid) border-box;
-    /*background-color: transparent;*/
-    margin: 10px;
-    border: 3px solid transparent;
-    border-radius: 10px ;
-    color: black;
-    font-size:25px
+.question {
+    /* POSITION ET DÉCO DU TEXTE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    position: relative;
+    text-align: center;
+    font-size: xxx-large;
+
+    /* TAILLE DU BLOC QUESTION */
+    /*height: 10vh;*/
+    max-height: fit-content;
+    width: 50vw;
+
+    /* LES BORDS */
+    border: 0.7vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+                radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
-#next-button, #test {
-    border-radius: 10px; 
+.options {
     background-color: transparent;
-    border-width: 4px;
-    border-color: #8ae99e;
-    color: black;
+
+    /* TAILLE DU BLOC OPTIONS */
+    width: 45vw;
+    max-height: 50vh;
+    margin-top: 5vh;
+
+    /* POSITION / CENTRAGE */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+/* Cette classe doit être ajoutée au JS pour pouvoir l'appliquer à notre écran */
+.button-options {
+    /* TAILLE DU BOUTON */
+    height: 6vh;
+    width: 20vw;
+
+    /* POSITION */
+    margin: 0.5em 0.5em;
+
+    /* LES BORDS */
+    border: 0.5vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+    radial-gradient(#00C9A7, #845EC2) border-box;
+}
+
+.button-container {
+    /*background-color: cadetblue;*/
+}
+
+#next-button, #replay-button, #test {
+    /*background-color: blueviolet;*/
+
+    /* POSITION */
+    margin: 3vh; /* marge entre le bas et le bouton */
+    padding: 1rem 1rem;
+
+    /* LES BORDS */
+    border: 0.5vw solid transparent; /* Épaisseur du bord */
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box, radial-gradient(#00C9A7, #845EC2) border-box;
 }
 
 .correct {
-    background: greenyellow;
+    color: #00C9A7;
+    border: 0.5vw solid #00C9A7;
 }
 
 .untrue {
-    background: red;
+    color: #FF0000;
+    border: 0.5vw solid #FF0000;
+}
+
+#score {
+    color:rgb(0, 0, 0);
+    background-color: rgb(241, 245, 249);
+    width: 100px;
+    height: 80px;
+    
 }
