@@ -32,7 +32,7 @@ body {
 }
 
 /* POLICE */
-.question, .button-options, #next-button, #replay-button, .correct, .incorrect, .gif, #scoreboard {
+.question, .button-options, #next-button, #replay-button, .correct, .untrue, .gif, #scoreboard {
     font-family: "Gill Sans";
     color: white;
     font-size: x-large;
