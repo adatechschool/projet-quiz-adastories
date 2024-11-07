@@ -160,8 +160,7 @@ function finalScore () {
 function updateProgress() {
     // Ne commence pas à zéro
     const progressFill = document.getElementById('progress-fill');
-    const fill = currentQuestionIndex + 1;
-    const percentage = (fill / arrayLength) * 100;
+    const percentage = (currentQuestionIndex / (arrayLength - 1)) * 100;
 
     progressFill.style.width = percentage + '%';
     // progressText.textContent = `Question ${currentQuestion} sur ${totalQuestions}`;
