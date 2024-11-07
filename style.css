@@ -66,7 +66,7 @@ body {
     /*background-color: pink;*/
 
     /* TAILLE DU BLOC OPTIONS */
-    width: 45vw;
+    max-width: 45vw;
     max-height: 50vh;
     margin-top: 5vh;
 
@@ -175,10 +175,7 @@ button {
 .gif-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Assure que le container prend toute la largeur disponible */
-    margin: 20px 0; /* Ajoute un peu d'espace vertical */
+    margin: 1rem 0; /* Ajoute un peu d'espace vertical */
 }
 
 .div-final-score {
@@ -186,21 +183,16 @@ button {
 }
 
 /* AFFICHAGE GIF */
-.gif {
-    margin: 3vh;
-    min-width: 10vw;
-    max-height: 30vh;
-}
-
 img {
+    max-height: 30vh;
     border: 0.7vw solid greenyellow;
-    margin: auto;
 }
 
 .hidden {
     display: none;
 }
 
+/* AFFICHAGE SCORE ET BARRE DE PROGRESSION */
 .score-container {
     /* TAILLE */
     min-width: 70vw;
@@ -242,4 +234,12 @@ img {
     border-radius: 30px;
     background: linear-gradient(#000, #000) padding-box,
     radial-gradient(#00C9A7, #845EC2) border-box;
+}
+
+#progress-fill {
+    background-color: #00C9A7;
+    height: 100%;
+    width: 0%;
+    border-radius: 30px;
+    transition: width 0.5s ease-in-out;
 }

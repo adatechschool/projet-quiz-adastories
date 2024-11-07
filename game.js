@@ -1,8 +1,9 @@
 import { quiz_adastories } from './questions.js'; // Import des questions
 
-// Pour suivre a question actuelle
 let currentQuestionIndex = 0;
 let score = 0;
+
+const arrayLength = quiz_adastories.questions.length;
 
 // DOM affichage
 const question = document.querySelector('.question');
@@ -15,12 +16,11 @@ const divFinalScore = document.querySelector('.div-final-score');
 
 // Ici on charge la question et ses options :
 function loadQuestion() {
+    // Récupère la question actuelle
+    let currentQuestion = quiz_adastories.questions[currentQuestionIndex]; // Pour pouvoir accéder à cette variable je dois la mettre en globale
 
     // Vider le conteneur des options
     options.innerHTML = '';
-
-    // Récupère la question actuelle
-    let currentQuestion = quiz_adastories.questions[currentQuestionIndex]; // Pour pouvoir accéder à cette variable je dois la mettre en globale
 
     // injection du texte dans le DOM :
     question.innerText = currentQuestion.text;
@@ -37,6 +37,7 @@ function loadQuestion() {
 
     // Après que la réponse soit vérifiée par la fonction checkAnswer, on désactive à nouveau le bouton suivant avant de sélectionner une option/réponse.
     nextBtn.disabled = true;
+    updateProgress();
 }
 
 // Évènement au clique que le bouton suivant :
@@ -48,6 +49,7 @@ nextBtn.addEventListener('click', () => {
     // Vérifier s'il reste des questions
     if (currentQuestionIndex < quiz_adastories.questions.length) {
         loadQuestion();
+        updateProgress();
     } else {
         // Si plus de questions, indiquer la fin du quiz
         question.innerText = 'Le quiz est terminé !';
@@ -120,7 +122,6 @@ function checkAnswer(element) {
 // Ici une fonction qui affiche un GIF selon le score
 // Il faut nettoyer c'est pas propre
 function finalScore () {
-    const arrayLength = quiz_adastories.questions.length;
     const medium = arrayLength/2;
 
     // S'assure que les conteneurs sont vides avant d'ajoute du nouveau contenu
@@ -154,6 +155,16 @@ function finalScore () {
     }
 
     gifContainer.appendChild(img);
+}
+
+function updateProgress() {
+    // Ne commence pas à zéro
+    const progressFill = document.getElementById('progress-fill');
+    const fill = currentQuestionIndex + 1;
+    const percentage = (fill / arrayLength) * 100;
+
+    progressFill.style.width = percentage + '%';
+    // progressText.textContent = `Question ${currentQuestion} sur ${totalQuestions}`;
 }
 
 // Permet de charger la question à l'ouverture de la page
