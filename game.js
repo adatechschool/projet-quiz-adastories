@@ -60,10 +60,10 @@ getNextBtn.addEventListener('click', () => {
 // LEYANE
 getReplayBtn.addEventListener('click', () => {
     currentQuestionIndex = 0;
-    score = 0;
 
-    // console.log(score);
+    score = 0;
     scoreAffiche.innerText = score;
+
     getReplayBtn.style.display = 'none';
     getNextBtn.style.display = 'inline-block';
 
