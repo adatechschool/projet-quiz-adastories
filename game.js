@@ -57,7 +57,6 @@ getNextBtn.addEventListener('click', () => {
     }
 })
 
-// LEYANE
 getReplayBtn.addEventListener('click', () => {
     currentQuestionIndex = 0;
 
@@ -67,7 +66,7 @@ getReplayBtn.addEventListener('click', () => {
     getReplayBtn.style.display = 'none';
     getNextBtn.style.display = 'inline-block';
 
-    // IMPORTANT: Nettoyer et cacher les conteneurs
+    // Nettoyer et cacher les conteneurs score final et gif
     gifContainer.innerHTML = '';
     divFinalScore.innerHTML = '';
 
@@ -107,12 +106,11 @@ function checkAnswer (pointer) {
 }
 
 // Ici une fonction qui affiche un GIF selon le score
-// Il faut nettoyer c'est pas propre
 function finalScore() {
     const arrayLength = quiz_adastories.questions.length;
     const medium = arrayLength/2;
 
-    // IMPORTANT: S'assurer que les conteneurs sont vides avant d'ajouter du nouveau contenu
+    // S'assure que les conteneurs sont vides avant d'ajoute du nouveau contenu
     gifContainer.innerHTML = '';
     divFinalScore.innerHTML = '';
 
