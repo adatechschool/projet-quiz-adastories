@@ -100,8 +100,6 @@ function checkAnswer(element) {
 
     // Récupérer la bonne réponse selon l'index de la question :
     let correctAnswer = quiz_adastories.questions[currentQuestionIndex].correct_answer
-    console.log('Variable correcte answer: ', correctAnswer)
-
 
     // Conditions pour vérifier les réponses :
     if (selectedAnswer === correctAnswer) {
@@ -110,7 +108,6 @@ function checkAnswer(element) {
 
         // On incrémente le score :
         score++;
-        console.log("score: ", score)
 
         // DOM :
         scoreboard.textContent = `Score: ${score}`;
@@ -135,7 +132,7 @@ function finalScore () {
     img.classList.add('gif');
 
     if (score === arrayLength) {
-        divFinalScore.textContent = `Vous êtes trop forts ! Score = ${score}/${arrayLength}`;
+        divFinalScore.innerText = `Vous êtes trop forts ! Score = ${score}/${arrayLength}`;
         img.src = 'https://i.giphy.com/media/MOWPkhRAUbR7i/giphy.gif';
         img.alt = "Félicitations";
     } else if (score > medium) {
@@ -150,7 +147,6 @@ function finalScore () {
         divFinalScore.textContent = `Allez, tu peux mieux faire ! Score = ${score}/${arrayLength}`;
         img.src = 'https://i.giphy.com/media/R4B99GWm99hn3tFlz0/giphy.gif';
         img.alt = "Peux mieux faire !";
-        options.appendChild(gif);
     } else if (score === 0) {
         divFinalScore.textContent = `C'est nul ! Score = ${score}/${arrayLength}`;
         img.src = 'https://i.giphy.com/media/06ICMm65hcawzW3Dst/giphy.gif';
