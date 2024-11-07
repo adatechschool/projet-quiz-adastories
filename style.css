@@ -207,11 +207,16 @@ button {
     border-radius: 30px;
     background: linear-gradient(#000, #000) padding-box,
                 radial-gradient(#00C9A7, #845EC2) border-box;
+
+    /* CENTRAGE DU TEXTE */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #progress-bar {
     /* TAILLE DU TABLEAU D'AFFICHAGE */
-    height: 1vh;
+    height: 2vh;
     width: 35vw;
 
     /* LES BORDS */

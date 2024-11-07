@@ -10,6 +10,8 @@ const options = document.querySelector('.options');
 const nextBtn = document.querySelector('#next-button');
 const replayBtn = document.querySelector('#replay-button');
 const scoreboard = document.querySelector('#scoreboard');
+const gifContainer = document.querySelector('.gif-container');
+const divFinalScore = document.querySelector('.div-final-score');
 
 // Ici on charge la question et ses options :
 function loadQuestion() {
@@ -66,6 +68,11 @@ replayBtn.addEventListener('click', () => {
     // Cacher le bouton Rejouer et afficher le bouton Suivant
     replayBtn.style.display = 'none';
     nextBtn.style.display = 'inline-block';
+
+    // Nettoyer et cacher les conteneurs
+    gifContainer.innerHTML = '';
+    divFinalScore.innerHTML = '';
+
 
     // Recharger la première question
     loadQuestion()
