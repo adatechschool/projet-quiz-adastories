@@ -50,15 +50,10 @@ body {
     flex-direction: column; /* permet de mettre en colonne */
     align-items: center; /* centre les blocs au centre */
     justify-content: space-between; /* met en espace entre les blocs */
-
-    /* N'est plus utile avec le paramètres de position plus haut */
-    /*margin-top:50vh; !*vh c'est viewport pour que lecontenu commence a 50 dela page (milieu)*!*/
-    /*transform: translateY(-50%);!* pour le decal surl'axe du Y(décale a sa propre hauteur)*!*/
-    /*text-align: center;!*fait centrer le bouton suivant *!*/
 }
 
 /* POLICE */
-.question, .button-options, #next-button, #replay-button, #score, .gif {
+.question, .button-options, #next-button, #replay-button, #score, .div-final-score {
     font-family: "Gill Sans";
     color: white;
     font-size: x-large;
@@ -94,12 +89,10 @@ body {
     max-height: 50vh;
     margin-top: 5vh;
 
-    /* POSITION / CENTRAGE */
+    /* POSITION - CENTRAGE */
     display: flex;
-    justify-content: center;
-    align-content: space-between;
     flex-wrap: wrap;
-    /*flex-direction: column;*/
+    justify-content: center;
 }
 
 /* Cette classe doit être ajoutée au JS pour pouvoir l'appliquer à notre écran */
@@ -193,16 +186,31 @@ button.untrue:hover{
     border: 0.5vw solid #FF0000;
 }
 
+.gif-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Assure que le container prend toute la largeur disponible */
+    margin: 20px 0; /* Ajoute un peu d'espace vertical */
+}
+
+.div-final-score {
+    text-align: center;
+}
+
 /* AFFICHAGE GIF */
 .gif {
     margin: 3vh;
     min-width: 10vw;
     max-height: 30vh;
-
-    /* TEXTE CENTRÉ */
-    text-align: center;
 }
 
 img {
     border: 0.7vw solid greenyellow;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
 }
